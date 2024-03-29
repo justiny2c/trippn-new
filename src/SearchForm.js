@@ -16,7 +16,7 @@ function SearchForm() {
     // Make API call to fetch suggestions based on the user input
     // For example, you can use a location API like Google Places API or OpenTripMap API
     // Replace 'YOUR_API_KEY' with your actual API key
-    const API_KEY = 'AIzaSyDE-6QOxEA52lyxN6s1LuYcV8U49P6iPZs';
+    const API_KEY = 'zzzzzzz';
     const response = await fetch(
         `https://maps.googleapis.com/maps/api/place/autocomplete/json?input=${value}&types=(cities)&key=${API_KEY}`
       );
