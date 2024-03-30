@@ -11,13 +11,11 @@ function App() {
   return (
     <div>
       <NavBar />
-      <Router>
         <Routes>
           <Route exact path="/" element={<HomePage />} />
           <Route path="/plan-trip" element={<PlanTripPage />} />
           <Route path="/itinerary" element={<ItineraryPage />} />
         </Routes>
-      </Router>
     </div>
   );
 }

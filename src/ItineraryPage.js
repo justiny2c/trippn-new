@@ -2,7 +2,7 @@ import React from 'react';
 import FullCalendar from '@fullcalendar/react'; // Ensure you've installed the package
 import dayGridPlugin from '@fullcalendar/daygrid'; // For day grid view
 import interactionPlugin from '@fullcalendar/interaction'; // For interactive features
-// import './ItineraryPage.css'; // Make sure to have corresponding CSS
+import './ItineraryPage.css'; // Make sure to have corresponding CSS
 
 const ItineraryPage = () => {
   // You'll need to manage the state for your events, etc.
@@ -26,7 +26,8 @@ const ItineraryPage = () => {
     <div className="itinerary-page">
       <FullCalendar
         plugins={[dayGridPlugin, interactionPlugin]}
-        initialView="dayGridWeek"
+        initialView="dayGridMonth"
+        default={false}
         editable={true}
         selectable={true}
         selectMirror={true}

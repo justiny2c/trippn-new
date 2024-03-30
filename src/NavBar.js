@@ -1,12 +1,15 @@
 import React from 'react';
 import LogoWhite from "./images/trippn-logowhite.png"
+import {NavLink} from 'react-router-dom';
 import './NavBar.css'; // Make sure to create a corresponding CSS file
 
 const NavBar = () => {
   return (
     <div>
         <nav className="navbar">
-          <img src={LogoWhite} className="logo" alt="Trippn Logo"/>
+          <NavLink to="/">
+            <img src={LogoWhite} className="logo" alt="Trippn Logo"/>
+          </NavLink>
           <div className="nav-links">
             <a href="/plan">PLAN</a>
             <a href="/trips">TRIPS</a>
