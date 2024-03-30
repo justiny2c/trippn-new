@@ -33,14 +33,14 @@ const PlanTripPage = () => {
             <input
               type="text"
               name="from"
-              placeholder="WHERE ARE YOU TRAVELING FROM?"
+              placeholder="TRAVELING FROM?"
               value={tripDetails.from}
               onChange={handleInputChange}
             />
             <input
               type="text"
               name="to"
-              placeholder="WHERE ARE YOU GOING?"
+              placeholder="TRAVELING TO?"
               value={tripDetails.to}
               onChange={handleInputChange}
             />

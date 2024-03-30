@@ -16,31 +16,49 @@
   
   .form-container {
     background-color: rgba(0, 0, 0, 0.5); /* A semi-transparent black background */
-    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
     border-radius: 10px;
+    width: 75%;
   }
   
   form {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    padding: 20px;
   }
   
+  /* Responsive layout - makes a one column layout instead of a two-column layout */
+  /* @media (max-width: 800px) {
+    .form {
+      flex-direction: column;
+    }
+  } */
+  
   input {
-    margin: 10px 0;
+    margin: 10px;
     padding: 10px;
+    border-radius: 4px;
+    font-size: .7rem;
   }
 
   input[type="date" i] {
     font-family: Saira;
-    color:rgb(117,117,117)
+    color:rgb(117,117,117);
+    text-transform: uppercase;
   }
   
   .build-itinerary-button {
     background-color: #007bff; /* Bootstrap primary color for example */
     border: none;
+    border-radius: 3px;
     padding: 15px 20px;
     color: white;
-    margin-top: 10px;
+    margin: 10px;
     cursor: pointer;
+    font-weight: 600;
   }
   

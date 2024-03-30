@@ -5,7 +5,7 @@
     color: white;
     position: fixed;
     top: 0px;
-    width: 100%;
+    width: 97%;
   }
 
   .logo {
@@ -13,12 +13,12 @@
   }
 
   .nav-links {
-    margin-right: 5%;
+    margin-right: 6%;
   }
   
   .nav-links a {
     color: white;
     text-decoration: none;
-    margin-left: 20px;
+    margin-left: 4%;
     font-size: 1rem;
   }

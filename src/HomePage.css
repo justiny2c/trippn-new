@@ -4,6 +4,9 @@
     background-size: cover;
     background-position: center center no-repeat;
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   .hero {
@@ -18,10 +21,12 @@
     color: white;
     font-size: 3rem;
     text-align: center;
-    margin-bottom: 20px;
+    margin: 25px;
   }
   
   .cta-button {
+    display: flex;
+    align-items: center;
     background-color: #007bff; /* Bootstrap primary color for example */
     border: none;
     padding: 10px 20px;
@@ -30,5 +35,10 @@
     font-weight: bold;
     cursor: pointer;
     border-radius: 3px;
+    margin: 5px;
   }
+    .logo-button {
+      height: 1rem;
+      padding: 5px;
+    }
   
