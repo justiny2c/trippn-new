@@ -7,10 +7,51 @@
     align-items: center;
     justify-content: center;
     background-blend-mode: overlay;
-    background-size: cover;
+    background-size: 100% auto;
     background-position: center center no-repeat;
     height: 100vh;
   }
+
   .full-calendar {
-    width: 50%;
+    /* background-color: rgba(0, 0, 0, 0.5); A semi-transparent black background */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 30px;
+    border-radius: 10px;
+    width: 70%;
+    flex: 0 0 65% /* This will make the container fill the available space */
+  }
+
+  .fc {
+    width: 80% !important; /*Ensure FullCalendar takes up 100% width*/
+    height: 80% !important; /* Same for height if you want it to be fully stretched */
+}
+
+    .fc .fc-toolbar-title {
+        font-size: 1.2rem; /* Set your desired font size */
+    }
+    
+    /* This targets all the buttons in the calendar header */
+    .fc .fc-button {
+        font-size: .8rem; /* Set your desired font size for buttons */
+    }
+  
+  /* For more specific button adjustments
+  .fc .fc-prev-button,
+  .fc .fc-next-button,
+  .fc .fc-today-button {
+    font-size: .8rem; /* Example of targeting specific buttons */
+  /* } */
+
+  .itinerary-actions button {
+    background-color: #007bff; /* Bootstrap primary color for example */
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 3px;
+    margin: 5px;
   }

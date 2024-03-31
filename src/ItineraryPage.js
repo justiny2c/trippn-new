@@ -26,21 +26,20 @@ const ItineraryPage = () => {
     <div className="itinerary-page">
         <div className="full-calendar">
             <FullCalendar
-            plugins={[dayGridPlugin, interactionPlugin]}
-            initialView="dayGridMonth"
-            default={false}
-            editable={true}
-            selectable={true}
-            selectMirror={true}
-            dayMaxEvents={true}
-            weekends={true}
-            // events={/* Your events data here */}
-            eventClick={handleEventClick}
+                plugins={[dayGridPlugin, interactionPlugin]}
+                initialView="dayGridMonth"
+                editable={true}
+                selectable={true}
+                selectMirror={true}
+                dayMaxEvents={true}
+                weekends={true}
+                eventClick={handleEventClick}
+                titleFormat={{ month: 'short', year: 'numeric', day: 'numeric'}}
             />
-        </div>
-        <div className="itinerary-actions">
-            <button onClick={handleShare}>Share</button>
-            <button onClick={handleExport}>Export Itinerary</button>
+            <div className="itinerary-actions">
+                <button onClick={handleShare}>Share</button>
+                <button onClick={handleExport}>Export Itinerary</button>
+            </div>
         </div>
     </div>
   );
