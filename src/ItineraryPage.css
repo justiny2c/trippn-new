@@ -11,4 +11,6 @@
     background-position: center center no-repeat;
     height: 100vh;
   }
-  
+  .full-calendar {
+    width: 50%;
+  }
