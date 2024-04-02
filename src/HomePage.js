@@ -14,10 +14,14 @@ const HomePage = () => {
   return (
     <div className="homepage">
       <header className="hero">
-        <h1 className="hero-title">PLAN YOUR NEXT ADVENTURE</h1>
-        <button className="cta-button" onClick={navigateToPlanTrip}>
-          <img src={LogoWhite} className="logo-button" alt="Trippn Logo" />
-        </button>
+        <div className='hero-container'>
+          <p className='hero-mission'>Our mission — to inspire travel, while 
+           <br /> crafting worry-free experiences personalized to you.</p>
+          <p className="hero-title">Plan Your Adventure</p>
+          <button className="cta-button" onClick={navigateToPlanTrip}>
+            <img src={LogoWhite} className="logo-button" alt="Trippn Logo" />
+          </button>
+        </div>
       </header>
     </div>
   );

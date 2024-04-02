@@ -11,11 +11,11 @@ const NavBar = () => {
             <img src={LogoBlue} className="logo" alt="Trippn Logo"/>
           </NavLink>
           <div className="nav-links">
-            <a href="/plan">PLAN</a>
-            <a href="/trips">TRIPS</a>
-            <a href="/about">ABOUT</a>
-            <a href="/faq">FAQ</a>
-            <a href="/account">ACCOUNT</a>
+            <a href="/plan-trip">Plan A Trip</a>
+            <a href="/trips">Itineraries</a>
+            <a href="/about">About Us</a>
+            {/* <a href="/faq">FAQ</a> */}
+            <a href="/account">Account</a>
           </div>
       </nav>
     </div>
