@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate hook from react-router-dom
-import LogoWhite from "./images/trippn-logowhite.png"
+import LogoWhite from "./images/trippn-white-sm.png"
 import './HomePage.css'; // Make sure to create a corresponding CSS file
 
 
@@ -16,7 +16,7 @@ const HomePage = () => {
       <header className="hero">
         <h1 className="hero-title">PLAN YOUR NEXT ADVENTURE</h1>
         <button className="cta-button" onClick={navigateToPlanTrip}>
-          <img src={LogoWhite} className="logo" alt="Trippn Logo" />
+          <img src={LogoWhite} className="logo-button" alt="Trippn Logo" />
         </button>
       </header>
     </div>
