@@ -16,13 +16,27 @@ const HomePage = () => {
       <header className="hero">
         <div className='hero-container'>
           <p className='hero-mission'>Our mission — to inspire travel, while 
-           <br /> crafting worry-free experiences personalized to you.</p>
-          <p className="hero-title">Plan Your Adventure</p>
-          <button className="cta-button" onClick={navigateToPlanTrip}>
-            <img src={LogoWhite} className="logo-button" alt="Trippn Logo" />
-          </button>
+           <br /> crafting worry-free experiences personalized to you</p>
+          <p className="hero-title">Plan Your Next Adventure</p>
+          <div className='hero-statement-action'>
+            <p className="hero-statement">For Unforgettable Memories</p>
+            <button className="cta-button" onClick={navigateToPlanTrip}>
+              <img src={LogoWhite} className="logo-button" alt="Trippn Logo" />
+            </button>
+          </div>
         </div>
       </header>
+      <div className='section-container'>
+          <p className='section-mission'>Our mission — to inspire travel, while 
+           <br /> crafting worry-free experiences personalized to you</p>
+          <p className="section-title">Plan Your Next Adventure</p>
+          <div className='section-statement-action'>
+            <p className="section-statement">For Unforgettable Memories</p>
+            <button className="cta-button" onClick={navigateToPlanTrip}>
+              <img src={LogoWhite} className="logo-button" alt="Trippn Logo" />
+            </button>
+          </div>
+      </div>
     </div>
   );
 };

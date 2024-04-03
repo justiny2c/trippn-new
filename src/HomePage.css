@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Saira:wght@100..900&display=swap');
+
 .homepage {
     /* background-image: url('./images/caleb-bennetts-WWjcvKUW1FI-unsplash.jpg'), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
     background-blend-mode: overlay;
@@ -5,27 +7,33 @@
     background-position: center center no-repeat; */
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
   }
   
   .hero {
-    display: flex;
     background-image: url('./images/ethan-dow-xssEs_oCv-A-unsplash.jpg'), linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2));
     background-blend-mode: overlay;
     background-size: cover;
-    background-position: bottom 20px;
+    background-position: bottom 100px;
+    display: flex;
     flex-direction: column;
     align-items: left;
     justify-content: center;
     color: white;
-    height: 60%;
+    height: 70%;
     width: 100%;
     border-radius: 20px 20px 0 0;
     margin-top: 70px;
+    z-index: 0;
+    position: relative;
   }
 
   .hero-container {
-    padding:20px
+    padding:20px;
+    position: absolute;
+    top: 10%;
+    left: 2%; 
   }
 
     .hero-mission {
@@ -34,28 +42,89 @@
     }
     
     .hero-title {
+      font-family: "Noto Serif", serif;
+      font-style: italic;
       font-size: 2.8rem;
       font-weight: 500;
       padding: 5px;
       margin: 0;
     }
-    
-    .cta-button {
+
+    .hero-statement-action {
       display: flex;
-      justify-content: center;
+      flex-direction: row;
       align-items: center;
-      background-color: #5194f1; /* Bootstrap primary color for example */
-      border: none;
-      padding: 10px 20px;
-      color: white;
-      text-transform: uppercase;
-      cursor: pointer;
-      border-radius: 3px;
-      /* margin: 5px 5px 5px 200px; */
-      margin: 5px;
-      width: 120px;
+      padding: 5px;
+      margin: 0;
+      height: 70px;
     }
+
+      .hero-statement{
+        font-size: 2.8rem;
+        font-weight: 450;
+        margin: 0 3% 0 0;
+        text-wrap: nowrap;
+      }
+    
+      .cta-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #5194f1; /* Bootstrap primary color for example */
+        border: none;
+        padding: 5px 15px;
+        color: white;
+        text-transform: uppercase;
+        cursor: pointer;
+        border-radius: 3px;
+        margin: 5px;
+        width: 120px;
+        height: 40px;
+      }
+
       .logo-button {
         height: 1.5rem;
         padding: 5px;
       }
+
+
+  .section-container {
+    padding:20px;
+    margin-top: -18px;
+    border-radius: 20px 20px 0 0;
+    z-index: 1;
+    background-color: white;
+    height: 40%;
+  }
+
+    .section-mission {
+      padding: 5px;
+      margin: 0;
+    }
+    
+    .section-title {
+      font-family: "Noto Serif", serif;
+      font-style: italic;
+      font-size: 2.8rem;
+      font-weight: 500;
+      padding: 5px;
+      margin: 0;
+    }
+
+    .section-statement-action {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 5px;
+      margin: 0;
+      height: 70px;
+    }
+
+      .section-statement{
+        font-size: 2.8rem;
+        font-weight: 450;
+        margin: 0 3% 0 0;
+        text-wrap: nowrap;
+      }
+          
+
