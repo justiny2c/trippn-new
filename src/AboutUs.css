@@ -1,0 +1,39 @@
+/* AboutUs.css */
+
+.about-us {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 50px; /* Adjust as needed */
+    margin-top: 70px;
+    background-color: #fff; /* Assuming a white background */
+  }
+  
+  .text-section {
+    width: 50%;
+  }
+  
+  .text-section h2 {
+    font-size: 2.8rem;
+    font-weight: 450;
+    text-wrap: nowrap;
+    color: #000;
+  }
+  
+  .text-section p {
+    font-size: 1rem; /* Standard font size for the paragraph */
+    color: #666; /* A lighter shade of black for the paragraph */
+  }
+  
+  .image-section {
+    width: 40%;
+    display: flex;
+    justify-content: center; /* Center the image in the column */
+  }
+  
+  .image-section img {
+    border-radius: 30px; /* Makes the image circular */
+    width: 400px; /* Set a fixed width to match the design */
+    height: 400px; /* Set a fixed height to match the design */
+    object-fit: cover; /* Ensures the image covers the frame area */
+  }
