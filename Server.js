@@ -1,3 +1,6 @@
+ // NOT USED 
+
+
 const express = require ("express")
 const cors = require ("cors")
 const bodyParser = require("body-parser")
@@ -5,10 +8,6 @@ const bodyParser = require("body-parser")
 require("dotenv").config();
 
 const{OpenAI}=require("openai")
-
-// const config = new Configuration({
-//     apiKey:""
-// })
 
 const openai = new OpenAI({
     apiKey: process.env.OPENAI_API_KEY
