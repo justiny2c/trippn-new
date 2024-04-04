@@ -1,12 +1,17 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate hook from react-router-dom
 import LogoWhite from "./images/trippn-white-sm.png"
+// You would import your icons or images here
+import brainIcon from './icons/brain.svg';
+import gemIcon from './icons/gem.svg';
+import plannerIcon from './icons/planner.svg';
+import techIcon from './icons/tech.svg';
 import './HomePage.css'; // Make sure to create a corresponding CSS file
 
 
 const ValueCard = ({ icon, title, description }) => (
   <div className="value-card">
-    {/* <img src={icon} alt={title} /> */}
+    <img src={icon} alt={title} />
     <h3>{title}</h3>
     <p>{description}</p>
   </div>
@@ -37,21 +42,21 @@ const HomePage = () => {
       <div className='section-container'>
         <div className="card-container">
           <ValueCard
-            // icon={iconChoices}
+            icon={plannerIcon}
             title="Seamlessly Planned, Impeccably Executed"
             description="Dive into the details of how users can expect flawlessly organized trips."
           />          
           <ValueCard
-            // icon={iconDiscounts}
+            icon={brainIcon}
             title="Travel Smarter, Not Harder"
             description="Convenient and time-efficienct for planning."
           />
           <ValueCard
-            // icon={iconBooking}
+            icon={gemIcon}
             title="From Hidden Gems to Iconic Wonders"
             description="Highlight the range of destinations and experiences available."
           /><ValueCard
-            // icon={iconGuide}
+            icon={techIcon}
             title="AI-Powered Itineraries Just for You"
             description="Innovative technology behind personalized travel planning."
           />

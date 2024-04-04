@@ -6,6 +6,8 @@
     position: fixed;
     top: 0px;
     width: 98%;
+    z-index: 9999;
+    background-color: white;
   }
 
   .logo {
