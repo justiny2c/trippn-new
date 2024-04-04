@@ -1,39 +1,51 @@
 /* AboutUs.css */
 
-.about-us {
+.about-page {
     display: flex;
+    justify-content: center;
+    height: 100vh;
+  }
+
+    .about-container {
+    display: flex;
+    flex-direction: row;
     align-items: center;
-    justify-content: space-evenly;
-    padding: 50px; /* Adjust as needed */
+    justify-content: center;
+    padding: 20px; /* Adjust as needed */
     margin-top: 70px;
-    background-color: #fff; /* Assuming a white background */
-  }
-  
-  .text-section {
-    width: 50%;
-  }
-  
-  .text-section h2 {
-    font-size: 2.8rem;
-    font-weight: 450;
-    text-wrap: nowrap;
-    color: #000;
-  }
-  
-  .text-section p {
-    font-size: 1rem; /* Standard font size for the paragraph */
-    color: #666; /* A lighter shade of black for the paragraph */
-  }
-  
-  .image-section {
-    width: 40%;
-    display: flex;
-    justify-content: center; /* Center the image in the column */
-  }
-  
-  .image-section img {
-    border-radius: 30px; /* Makes the image circular */
-    width: 400px; /* Set a fixed width to match the design */
-    height: 400px; /* Set a fixed height to match the design */
-    object-fit: cover; /* Ensures the image covers the frame area */
-  }
+    background-color: #b1d8ee;
+    border-radius: 20px 20px 0 0;
+    height: 70%;
+    }
+
+    .text-section {
+        width: 45%;
+        padding: 10px;
+    }
+    
+    .text-section h2 {
+        font-size: 2.4rem;
+        font-weight: 450;
+        margin: 10px 0;
+        text-wrap: nowrap;
+        color: black;
+    }
+    
+    .text-section p {
+        font-size: .9rem; 
+        color: black;
+    }
+    
+    .image-section {
+        padding: 10px;
+        width: 45%;
+        display: flex;
+        justify-content: center; /* Center the image in the column */
+    }
+    
+    .image-section img {
+        border-radius: 35px; /* Makes the image circular */
+        width: 350px; /* Set a fixed width to match the design */
+        height: 350px; /* Set a fixed height to match the design */
+        object-fit: cover; /* Ensures the image covers the frame area */
+    }

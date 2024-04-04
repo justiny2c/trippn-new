@@ -1,10 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Saira:wght@100..900&display=swap');
 
 .homepage {
-    /* background-image: url('./images/caleb-bennetts-WWjcvKUW1FI-unsplash.jpg'), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
-    background-blend-mode: overlay;
-    background-size: cover;
-    background-position: center center no-repeat; */
     height: 100vh;
     display: flex;
     flex-direction: column;
