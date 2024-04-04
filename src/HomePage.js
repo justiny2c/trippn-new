@@ -4,6 +4,14 @@ import LogoWhite from "./images/trippn-white-sm.png"
 import './HomePage.css'; // Make sure to create a corresponding CSS file
 
 
+const ValueCard = ({ icon, title, description }) => (
+  <div className="value-card">
+    {/* <img src={icon} alt={title} /> */}
+    <h3>{title}</h3>
+    <p>{description}</p>
+  </div>
+);
+
 const HomePage = () => {
   const history = useNavigate(); // Get the history object to programmatically navigate
 
@@ -27,24 +35,27 @@ const HomePage = () => {
         </div>
       </header>
       <div className='section-container'>
-        <p className='section-mission'>"Seamlessly Planned, Impeccably Executed"
-Dive into the details of how users can expect flawlessly organized trips.
-
-"AI-Powered Itineraries Just for You"
-Explain the innovative technology behind personalized travel planning.
-
-"From Hidden Gems to Iconic Wonders"
-Highlight the range of destinations and experiences available.
-
-"Travel Smarter, Not Harder"
-Emphasize the convenience and efficiency of using Trippn for planning.</p>
-        <p className="section-title">Plan Your Next Adventure</p>
-        {/* <div className='section-statement-action'>
-          <p className="section-statement">For Unforgettable Memories</p>
-          <button className="cta-button" onClick={navigateToPlanTrip}>
-            <img src={LogoWhite} className="logo-button" alt="Trippn Logo" />
-          </button>
-        </div> */}
+        <div className="card-container">
+          <ValueCard
+            // icon={iconChoices}
+            title="Seamlessly Planned, Impeccably Executed"
+            description="Dive into the details of how users can expect flawlessly organized trips."
+          />          
+          <ValueCard
+            // icon={iconDiscounts}
+            title="Travel Smarter, Not Harder"
+            description="Convenient and time-efficienct for planning."
+          />
+          <ValueCard
+            // icon={iconBooking}
+            title="From Hidden Gems to Iconic Wonders"
+            description="Highlight the range of destinations and experiences available."
+          /><ValueCard
+            // icon={iconGuide}
+            title="AI-Powered Itineraries Just for You"
+            description="Innovative technology behind personalized travel planning."
+          />
+        </div>
       </div>
     </div>
   );
