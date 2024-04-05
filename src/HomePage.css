@@ -84,33 +84,90 @@
 
 
   .section-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding:4%;
     margin-top: -18px;
     border-radius: 20px 20px 0 0;
     z-index: 1;
     background-color: white;
     height: 40%;
+
   }
+
+    .section-why {
+      margin-bottom: 40px;
+      padding: 6px 8px;
+      font-weight: 400;
+      font-size: 1.1rem;
+      border-style: solid;
+      border-width: 2px;
+      border-radius: 15px;
+  }
+
+    .section-title {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: #0B2027;
+      margin-bottom: 50px;
+    }
+
+    .section-statement {
+      font-size: 2rem;
+      margin: 0;
+    }
+      .two {
+        margin-top: -55px;
+        margin-left: 10px;
+      }
+
+    .section-emphasis {
+      font-family: "Noto Serif", serif;
+      font-style: italic;
+      font-size: 3.5rem;
+      margin-right: 30px;
+      margin-top: -60px;
+    }
+
+
+
+
 
     .card-container {
       display: flex;
       flex-direction: row;
       justify-content: space-evenly;
+      margin: 20px;
     }
 
     .value-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       background-color: aliceblue;
+      color: #0B2027;
       border-radius: 20px;
       padding: 20px;
       margin: 10px;
       height: 280px;
       width: 250px;      
     }
+      .value-statement {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding:5px;
+      }
+
+      .value-card p {
+        margin:0;
+      }
 
       .value-card img {
-        width: 45px; /* Size of icons */
-        margin-bottom: 15px;
-        fill: white;
+        width: 50px; /* Size of icons */
+        margin: 20px;
       }
           
 

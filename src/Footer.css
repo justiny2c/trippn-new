@@ -1,0 +1,33 @@
+/* Footer.css */
+
+.footer {
+    background-color: #D36582;
+    color: white;
+    padding: 15px 50px; /* Padding around the content */
+    font-size: .9rem;
+    font-weight: 200;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* max-width: 1200px; */
+    margin: 0 auto;
+  }
+  
+  .social-media-links a {
+    color: #fff; /* White text color */
+    text-decoration: none; /* No underline */
+    margin-right: 15px; /* Space between links */
+  }
+  
+  .social-media-links a:hover {
+    text-decoration: underline; /* Underline on hover */
+  }
+  
+  .contact-info p {
+    margin: 0; /* Remove default paragraph margin */
+    padding: 5px 0; /* Space between lines of text */
+  }
+  

@@ -7,6 +7,7 @@ import ItineraryPage from './ItineraryPage';
 import AboutUs from './AboutUs';
 import ChatGPT from './ChatGPT';
 import './App.css';
+import Footer from './Footer';
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           <Route path="/aboutus" element={<AboutUs />} />
           <Route path="/chat" element={<ChatGPT />} />
         </Routes>
+       <Footer /> 
     </div>
   );
 }

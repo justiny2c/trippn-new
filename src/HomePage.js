@@ -10,10 +10,12 @@ import './HomePage.css'; // Make sure to create a corresponding CSS file
 
 
 const ValueCard = ({ icon, title, description }) => (
-  <div className="value-card">
+  <div className="value-card">    
     <img src={icon} alt={title} />
-    <h3>{title}</h3>
-    <p>{description}</p>
+    <div className='value-statement'>
+      <h3>{title}</h3>
+      <p>{description}</p>
+    </div>  
   </div>
 );
 
@@ -40,6 +42,15 @@ const HomePage = () => {
         </div>
       </header>
       <div className='section-container'>
+        <p className='section-why'>WHY?</p>
+        <div className='section-title'>
+          <p className='section-statement one'>
+            We're not re-inventing the wheel — <br/>
+            rather the
+          </p>
+          <p className='section-emphasis'>ride</p>
+          <p className='section-statement two'>in how you travel</p>
+        </div>
         <div className="card-container">
           <ValueCard
             icon={plannerIcon}
@@ -57,7 +68,7 @@ const HomePage = () => {
             description="Highlight the range of destinations and experiences available."
           /><ValueCard
             icon={techIcon}
-            title="AI-Powered Itineraries Just for You"
+            title="AI-Powered Itineraries, Just for You"
             description="Innovative technology behind personalized travel planning."
           />
         </div>
