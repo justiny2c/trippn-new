@@ -5,4 +5,6 @@ body {
   font-family: 'Saira', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  border-left: 5px solid white;
+  border-right: 5px solid white;
 }
