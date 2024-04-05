@@ -13,7 +13,7 @@ const NavBar = () => {
           <div className="nav-links">
             <a href="/plan-trip">Plan A Trip</a>
             <a href="/trips">Itineraries</a>
-            <a href="/about">About Us</a>
+            <a href="/aboutus">About Us</a>
             {/* <a href="/faq">FAQ</a> */}
             <a href="/account">Account</a>
           </div>

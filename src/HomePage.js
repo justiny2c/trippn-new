@@ -1,8 +1,23 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate hook from react-router-dom
 import LogoWhite from "./images/trippn-white-sm.png"
+// You would import your icons or images here
+import brainIcon from './icons/brain.svg';
+import gemIcon from './icons/gem.svg';
+import plannerIcon from './icons/planner.svg';
+import techIcon from './icons/tech.svg';
 import './HomePage.css'; // Make sure to create a corresponding CSS file
 
+
+const ValueCard = ({ icon, title, description }) => (
+  <div className="value-card">    
+    <img src={icon} alt={title} />
+    <div className='value-statement'>
+      <h3>{title}</h3>
+      <p>{description}</p>
+    </div>  
+  </div>
+);
 
 const HomePage = () => {
   const history = useNavigate(); // Get the history object to programmatically navigate
@@ -27,14 +42,36 @@ const HomePage = () => {
         </div>
       </header>
       <div className='section-container'>
-          <p className='section-mission'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In est ante in nibh mauris cursus mattis molestie. Donec adipiscing tristique risus nec feugiat in fermentum. Euismod nisi porta lorem mollis aliquam ut porttitor leo. Sit amet nulla facilisi morbi tempus iaculis urna. Risus ultricies tristique nulla aliquet enim. Augue interdum velit euismod in pellentesque massa placerat. Aliquam sem et tortor consequat id porta nibh. Fermentum dui faucibus in ornare quam. Id velit ut tortor pretium viverra suspendisse potenti nullam ac.</p>
-          <p className="section-title">Plan Your Next Adventure</p>
-          {/* <div className='section-statement-action'>
-            <p className="section-statement">For Unforgettable Memories</p>
-            <button className="cta-button" onClick={navigateToPlanTrip}>
-              <img src={LogoWhite} className="logo-button" alt="Trippn Logo" />
-            </button>
-          </div> */}
+        <p className='section-why'>WHY?</p>
+        <div className='section-title'>
+          <p className='section-statement one'>
+            We're not re-inventing the wheel — <br/>
+            rather the
+          </p>
+          <p className='section-emphasis'>ride</p>
+          <p className='section-statement two'>in how you travel</p>
+        </div>
+        <div className="card-container">
+          <ValueCard
+            icon={plannerIcon}
+            title="Seamlessly Planned, Impeccably Executed"
+            description="Dive into the details of how users can expect flawlessly organized trips."
+          />          
+          <ValueCard
+            icon={brainIcon}
+            title="Travel Smarter, Not Harder"
+            description="Convenient and time-efficienct for planning."
+          />
+          <ValueCard
+            icon={gemIcon}
+            title="From Hidden Gems to Iconic Wonders"
+            description="Highlight the range of destinations and experiences available."
+          /><ValueCard
+            icon={techIcon}
+            title="AI-Powered Itineraries, Just for You"
+            description="Innovative technology behind personalized travel planning."
+          />
+        </div>
       </div>
     </div>
   );

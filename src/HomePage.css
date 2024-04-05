@@ -1,11 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Saira:wght@100..900&display=swap');
 
 .homepage {
-    /* background-image: url('./images/caleb-bennetts-WWjcvKUW1FI-unsplash.jpg'), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
-    background-blend-mode: overlay;
-    background-size: cover;
-    background-position: center center no-repeat; */
-    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -21,7 +16,7 @@
     align-items: left;
     justify-content: center;
     color: white;
-    height: 70%;
+    height: 650px;
     width: 100%;
     border-radius: 20px 20px 0 0;
     margin-top: 70px;
@@ -89,42 +84,90 @@
 
 
   .section-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding:4%;
     margin-top: -18px;
     border-radius: 20px 20px 0 0;
     z-index: 1;
     background-color: white;
     height: 40%;
+
   }
 
-    .section-mission {
-      padding: 5px;
+    .section-why {
+      margin-bottom: 40px;
+      padding: 6px 8px;
+      font-weight: 400;
+      font-size: 1.1rem;
+      border-style: solid;
+      border-width: 2px;
+      border-radius: 15px;
+  }
+
+    .section-title {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: #0B2027;
+      margin-bottom: 50px;
+    }
+
+    .section-statement {
+      font-size: 2rem;
       margin: 0;
     }
-    
-    .section-title {
+      .two {
+        margin-top: -55px;
+        margin-left: 10px;
+      }
+
+    .section-emphasis {
       font-family: "Noto Serif", serif;
       font-style: italic;
-      font-size: 2.8rem;
-      font-weight: 500;
-      padding: 5px;
-      margin: 0;
+      font-size: 3.5rem;
+      margin-right: 30px;
+      margin-top: -60px;
     }
 
-    .section-statement-action {
+
+
+
+
+    .card-container {
       display: flex;
       flex-direction: row;
-      align-items: center;
-      padding: 5px;
-      margin: 0;
-      height: 70px;
+      justify-content: space-evenly;
+      margin: 20px;
     }
 
-      .section-statement{
-        font-size: 2.8rem;
-        font-weight: 450;
-        margin: 0 3% 0 0;
-        text-wrap: nowrap;
+    .value-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: aliceblue;
+      color: #0B2027;
+      border-radius: 20px;
+      padding: 20px;
+      margin: 10px;
+      height: 280px;
+      width: 250px;      
+    }
+      .value-statement {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding:5px;
+      }
+
+      .value-card p {
+        margin:0;
+      }
+
+      .value-card img {
+        width: 50px; /* Size of icons */
+        margin: 20px;
       }
           
 
