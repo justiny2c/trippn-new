@@ -178,7 +178,9 @@
         width: 50px; /* Size of icons */
         margin: 20px;
       }
+
       .value-card h3 {
+        margin: 10px 0 15px;
         font-weight:550;
       }
 
