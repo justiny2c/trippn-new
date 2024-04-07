@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Saira:wght@100..900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Saira:wght@100..900&display=swap'); */
 
 .homepage {
     display: flex;
@@ -7,7 +7,7 @@
   }
   
   .hero {
-    background-image: url('./images/ethan-dow-xssEs_oCv-A-unsplash.jpg'), linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2));
+    background-image: url('../images/ethan-dow-xssEs_oCv-A-unsplash.jpg'), linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2));
     background-blend-mode: overlay;
     background-size: cover;
     background-position: bottom 100px;
@@ -65,7 +65,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: #5194f1; /* Bootstrap primary color for example */
+        background-color: #5194f1;
         border: none;
         padding: 5px 15px;
         color: white;
@@ -145,8 +145,8 @@
       background-color: aliceblue;
       color: #0B2027;
       border-radius: 40px;
-      padding: 20px;
-      margin: 10px 20px;
+      padding: 25px;
+      margin: 0 20px;
       height: 280px;
       width: 250px;      
     }
@@ -154,6 +154,7 @@
         display: flex;
         flex-direction: column;
         justify-content: space-around;
+        text-align: center;
         padding:5px;
       }
 

@@ -1,6 +1,6 @@
 import React from 'react';
+import aboutImage from '../images/justin-anderson-KnlgZ-3LOLk-unsplash.jpg'; // Replace with your image path
 import './AboutUs.css'; // Make sure to create and link the CSS file
-import aboutImage from './images/justin-anderson-KnlgZ-3LOLk-unsplash.jpg'; // Replace with your image path
 
 const AboutUs = () => {
   return (

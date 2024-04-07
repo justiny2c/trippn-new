@@ -1,5 +1,5 @@
 import React from 'react';
-import LogoBlue from "./images/trippn-blue-sm.png"
+import LogoBlue from "../images/trippn-blue-sm.png"
 import {NavLink} from 'react-router-dom';
 import './NavBar.css'; // Make sure to create a corresponding CSS file
 
