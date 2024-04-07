@@ -6,6 +6,7 @@
     padding: 15px 50px; /* Padding around the content */
     font-size: .9rem;
     font-weight: 200;
+    z-index: 9999;
   }
   
   .footer-content {

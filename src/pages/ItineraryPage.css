@@ -1,5 +1,5 @@
 .itinerary-page {  
-    background-image: url('./images/annie-spratt-Uk3t05ndSng-unsplash.jpg'), linear-gradient(rgba(0,0,0,0.52),rgba(0,0,0,0.52));
+    background-image: url('../images/annie-spratt-Uk3t05ndSng-unsplash.jpg'), linear-gradient(rgba(0,0,0,0.52),rgba(0,0,0,0.52));
     height: 100vh;
     color: white;
     display: flex;

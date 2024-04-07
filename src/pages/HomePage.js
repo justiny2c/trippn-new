@@ -1,11 +1,10 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate hook from react-router-dom
-import LogoWhite from "./images/trippn-white-sm.png"
-// You would import your icons or images here
-import brainIcon from './icons/brain.svg';
-import gemIcon from './icons/gem.svg';
-import plannerIcon from './icons/planner.svg';
-import techIcon from './icons/tech.svg';
+import LogoWhite from "../images/trippn-white-sm.png"
+import brainIcon from '../icons/brain.svg';
+import gemIcon from '../icons/gem.svg';
+import plannerIcon from '../icons/planner.svg';
+import techIcon from '../icons/tech.svg';
 import './HomePage.css'; // Make sure to create a corresponding CSS file
 
 

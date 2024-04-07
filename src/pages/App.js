@@ -2,12 +2,12 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import HomePage from './HomePage';
 import PlanTripPage from './PlanTripPage';
-import NavBar from './NavBar';
+import NavBar from '../components/NavBar';
 import ItineraryPage from './ItineraryPage';
 import AboutUs from './AboutUs';
 import ChatGPT from './ChatGPT';
 import './App.css';
-import Footer from './Footer';
+import Footer from '../components/Footer';
 
 
 function App() {
