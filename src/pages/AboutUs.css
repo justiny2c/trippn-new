@@ -43,8 +43,8 @@
     }
     
     .image-section img {
-        border-radius: 35px; /* Makes the image circular */
-        width: 350px; /* Set a fixed width to match the design */
-        height: 350px; /* Set a fixed height to match the design */
-        object-fit: cover; /* Ensures the image covers the frame area */
+        border-radius: 35px; 
+        width: 350px; 
+        height: 350px;
+        object-fit: cover;
     }

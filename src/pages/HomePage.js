@@ -1,11 +1,11 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate hook from react-router-dom
+import { useNavigate } from 'react-router-dom';
 import LogoWhite from "../images/trippn-white-sm.png"
 import brainIcon from '../icons/brain.svg';
 import gemIcon from '../icons/gem.svg';
 import plannerIcon from '../icons/planner.svg';
 import techIcon from '../icons/tech.svg';
-import './HomePage.css'; // Make sure to create a corresponding CSS file
+import './HomePage.css';
 
 
 const ValueCard = ({ icon, title, description }) => (
@@ -19,6 +19,7 @@ const ValueCard = ({ icon, title, description }) => (
 );
 
 const HomePage = () => {
+
   const history = useNavigate(); // Get the history object to programmatically navigate
 
   const navigateToPlanTrip = () => {
@@ -54,21 +55,21 @@ const HomePage = () => {
           <ValueCard
             icon={plannerIcon}
             title="Seamlessly Planned, Impeccably Executed"
-            description="Dive into the details of how users can expect flawlessly organized trips."
+            description="Dive into the details of how users can expect flawlessly organized trips"
           />          
           <ValueCard
             icon={brainIcon}
             title="Travel Smarter, Not Harder"
-            description="Convenient and time-efficienct for planning."
+            description="Convenient and time-efficienct for planning"
           />
           <ValueCard
             icon={gemIcon}
             title="From Hidden Gems to Iconic Wonders"
-            description="Highlight the range of destinations and experiences available."
+            description="Highlight the range of destinations and experiences available"
           /><ValueCard
             icon={techIcon}
             title="AI-Powered Itineraries, Just for You"
-            description="Innovative technology behind personalized travel planning."
+            description="Innovative technology behind personalized travel planning"
           />
         </div>
       </div>

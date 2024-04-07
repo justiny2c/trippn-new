@@ -8,10 +8,9 @@ const AboutUs = () => {
       <div className='about-container'>  
         <div className="text-section">
             <h2>About Us</h2>
-            <p>Welcome to Trippn, your go-to destination for personalized travel experiences powered by artificial intelligence. At Trippn, we believe that travel should be more than just a journey—it should be an adventure tailored to your unique preferences, interests, and aspirations. 
-                <br/><br/> Founded by Justin Chen, Trippn aims to revolutionize the way people explore the world. With a deep understanding of the challenges travelers face—from choice overload to lack of personalization—we set out to create a platform that simplifies the travel planning process and unlocks endless possibilities for unforgettable adventures.
-                <br/><br/> Our plaform harnesses the power of AI to curate personalized itineraries that suit your individual preferences and hobbies. Whether you're seeking a relaxing beach getaway, an exhilarating outdoor adventure, or a cultural immersion in a vibrant city, Trippn is here to help you discover and book the perfect trip with ease and confidence.
-                <br/><br/> Join us on this exciting journey as we redefine the way people travel. Whether you're a seasoned globetrotter or a first-time adventurer, Trippn is your trusted companion for personalized travel experiences that inspire, delight, and transform.
+            <p>Welcome to Trippn, where we harness AI to craft travel experiences that resonate with your unique style. Travel is more than reaching a destination; it's about tailored adventures shaped by your interests and dreams. 
+                <br/><br/> We understand the challenges of planning—too many choices, not enough customization. That's why we've built a platform that streamlines the process, offering bespoke itineraries for any traveler. Whether you crave serene shores, thrilling exploits, or cultural dives, Trippn makes your ideal trip a reality.
+                <br/><br/> Embark with us on a redefined travel experience, crafted for both avid and new explorers alike. Trippn is here to ensure your journeys are as individual as you are.
                 <br/><br/> Happy travels!
                 <br/><br/>Justin Chen
                 <br/>Founder & CEO, Trippn</p>
