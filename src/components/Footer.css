@@ -1,11 +1,11 @@
 /* Footer.css */
 
 .footer {
-    background-color: #D36582;
-    color: white;
-    padding: 15px 50px; /* Padding around the content */
+    background-color: #DCEED1;
+    color: black;
+    padding: 15px 50px;
     font-size: .9rem;
-    font-weight: 200;
+    font-weight: 400;
     z-index: 9999;
   }
   
@@ -15,11 +15,17 @@
     align-items: center;
     margin: 0 auto;
   }
+
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+    }
+  }
   
   .social-media-links a {
-    color: #fff; /* White text color */
+    color: black;
     text-decoration: none; /* No underline */
-    margin-right: 15px; /* Space between links */
+    margin-right: 15px;
   }
   
   .social-media-links a:hover {

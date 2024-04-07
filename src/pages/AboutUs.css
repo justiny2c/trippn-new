@@ -15,7 +15,7 @@
     margin-top: 70px;
     background-color: aliceblue;
     border-radius: 20px 20px 0 0;
-    height: 70%;
+    height: 75%;
     }
 
     .text-section {
@@ -32,15 +32,14 @@
     }
     
     .text-section p {
-        font-size: .9rem; 
-        color: black;
+        font-size: .95rem; 
     }
     
     .image-section {
         padding: 10px;
         width: 45%;
         display: flex;
-        justify-content: center; /* Center the image in the column */
+        justify-content: center;
     }
     
     .image-section img {
