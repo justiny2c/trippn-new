@@ -60,7 +60,7 @@
         margin: 0 3% 0 0;
         text-wrap: nowrap;
       }
-    
+
       .cta-button {
         display: flex;
         justify-content: center;
@@ -72,7 +72,7 @@
         text-transform: uppercase;
         cursor: pointer;
         border-radius: 3px;
-        margin: 5px;
+        margin: 10px 5px;
         width: 120px;
         height: 40px;
       }
@@ -82,6 +82,16 @@
         padding: 5px;
       }
 
+      @media (max-width: 768px) {
+        .hero-title, .hero-statement {
+          font-size: 2rem;
+        }
+
+        .hero-statement-action {
+          flex-direction: column;
+          align-items: start;
+        }
+      }
 
   .section-container {
     display: flex;
@@ -110,7 +120,6 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      color: #0B2027;
       margin-bottom: 50px;
     }
 
@@ -131,33 +140,44 @@
       margin-top: -60px;
     }
 
+    @media (max-width: 768px) {
+      .section-statement {
+        font-size: 1.6rem;
+      }
+    }
+
     .card-container {
       display: flex;
-      flex-direction: row;
+      flex-flow: row wrap;
       justify-content: space-evenly;
       margin: 20px;
     }
+
+
+
 
     .value-card {
       display: flex;
       flex-direction: column;
       align-items: center;
       background-color: aliceblue;
-      color: #0B2027;
       border-radius: 40px;
-      padding: 25px;
-      margin: 0 20px;
+      padding: 10px;
+      margin: 10px 20px;
       height: 280px;
       width: 250px;      
     }
       .value-statement {
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
         text-align: center;
-        padding:5px;
+        padding: 10px;
       }
 
+      .value-card img {
+        width: 50px; /* Size of icons */
+        margin: 20px;
+      }
       .value-card h3 {
         font-weight:550;
       }
@@ -166,9 +186,22 @@
         margin:0;
       }
 
-      .value-card img {
-        width: 50px; /* Size of icons */
-        margin: 20px;
-      }
-          
+
+
+    @media (max-width: 768px) {
+    .card-container {
+      flex-direction: column;
+    }
+
+    .value-card {
+      height: 250px;
+    }
+
+    .value-card p {
+      font-size: .9rem;
+      margin-bottom: 10px;
+    }
+
+
+  }     
 
