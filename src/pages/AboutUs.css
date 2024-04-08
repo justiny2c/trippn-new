@@ -12,10 +12,16 @@
     align-items: center;
     justify-content: center;
     padding: 20px; /* Adjust as needed */
-    margin-top: 70px;
+    margin-top: 68px;
     background-color: aliceblue;
     border-radius: 20px 20px 0 0;
     height: 75%;
+    }
+
+    @media (max-width: 768px) {
+        .about-container {
+            margin-top: 98px;
+        }
     }
 
     .text-section {
