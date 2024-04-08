@@ -26,10 +26,13 @@ const PlanTripPage = () => {
 
   return (
       <div className="plan-trip-page">
-        <div className='plan-trip-container'>
+        <div className='plan-trip-container'>          
+          <div className='form-title-container'>
+            <p className='form-title'>Ready to plan your</p>
+            <p className='form-emphasis'>trip?</p>
+          </div>
+          <p className='form-action'>LET'S GO!</p>
           <div className="form-container">
-            <p className='form-title'>Ready to plan your trip?</p>
-            <p className='form-action'>LET'S GO!</p>
             <form onSubmit={handleSubmit}>
               <input
                 type="text"
@@ -57,14 +60,14 @@ const PlanTripPage = () => {
                 value={tripDetails.endDate}
                 onChange={handleInputChange}
               />
-              <input
+              {/* <input
                 type="number"
                 name="travelers"
                 placeholder="# of Travelers"
                 value={tripDetails.travelers}
-                onChange={handleInputChange}
-              />
-              <button type="submit" className="build-itinerary-button">Build</button>
+                onChange=handleInputChange}
+              /> */}
+              <button type="submit" className="build-itinerary-button">Build Itinerary</button>
             </form>
           </div>
         </div>
