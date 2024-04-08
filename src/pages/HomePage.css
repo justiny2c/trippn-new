@@ -77,10 +77,17 @@
         height: 40px;
       }
 
+      .cta-button:hover {
+        box-shadow: 4px 4px lightslategray;
+        transform: scale(1.1);
+      }
+
       .logo-button {
         height: 1.5rem;
         padding: 5px;
       }
+
+
 
       @media (max-width: 768px) {
         .hero-title, .hero-statement {

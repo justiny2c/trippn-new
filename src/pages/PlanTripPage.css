@@ -117,10 +117,6 @@
       font-size: .82rem;
     }
 
-    /* input[type="text"] {
-      font-size: .9rem; /* Adjust this value to change the font size */
-    /* }  */
-
     input[type="date" i] {
       font-family: 'Saira', serif;
       color:white;
@@ -146,7 +142,11 @@
       font-size: 1rem;
       font-weight: 400;
       letter-spacing: 1.1px;
-      width: 200px;
+      width: 190px;
+    }
+
+    .build-itinerary-button:hover {
+      transform: scale(1.07);
     }
 
     @media (max-width: 768px) {
