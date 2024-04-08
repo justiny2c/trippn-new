@@ -8,14 +8,11 @@
 
     .about-container {
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
+    align-items: start;
     justify-content: center;
-    padding: 20px; /* Adjust as needed */
     margin-top: 68px;
-    background-color: aliceblue;
     border-radius: 20px 20px 0 0;
-    height: 75%;
     }
 
     @media (max-width: 768px) {
@@ -24,33 +21,56 @@
         }
     }
 
-    .text-section {
-        width: 45%;
-        padding: 10px;
-    }
-    
-    .text-section h2 {
-        font-size: 2.4rem;
-        font-weight: 450;
-        margin: 10px 0;
-        text-wrap: nowrap;
-        color: black;
-    }
-    
-    .text-section p {
-        font-size: .95rem; 
-    }
-    
-    .image-section {
-        padding: 10px;
-        width: 45%;
+    .title-section {
         display: flex;
+        flex-flow: column;
         justify-content: center;
+        height: 200px;
+        padding: 20px;
+        margin-left: 5%;
     }
-    
-    .image-section img {
-        border-radius: 35px; 
-        width: 350px; 
-        height: 350px;
-        object-fit: cover;
+
+        .title {
+            font-size: 2.4rem;
+            font-weight: 450;
+            padding: 5px;
+            margin: 0;
+        }
+
+        .title-statement {
+            font-family: "Noto Serif", serif;
+            font-style: italic;
+            font-size: 1.5rem;
+            font-weight: 500;
+            padding: 5px;
+            margin: 0;
+            color: #717568;
+        }
+
+    .text-container {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        background-image: url('../images/emily-karakis-h42lxMVrA08-unsplash.jpg'), linear-gradient(rgba(0,0,0,0.05),rgba(0,0,0,0.05));
+        background-blend-mode: overlay;
+        background-size: cover;
+        padding: 30px;
+        margin-top: -18px;
+        border-radius: 20px 20px 0 0;
+        height: 550px;
+        width: auto;
+    }
+
+    .text-section {
+        display: flex;
+        background: rgba(255, 255, 255, .92);
+        border-radius: 20px;
+        padding: 10px 20px;
+        height: 70%;
+        width: 40%;
+    }
+
+    .text-section p {
+        font-size: .85rem;
+        overflow: auto;
     }
