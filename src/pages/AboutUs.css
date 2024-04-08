@@ -25,9 +25,9 @@
         display: flex;
         flex-flow: column;
         justify-content: center;
-        height: 200px;
+        height: 250px;
         padding: 20px;
-        margin-left: 5%;
+        margin-left: 10%;
     }
 
         .title {

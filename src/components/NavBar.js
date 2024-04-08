@@ -22,7 +22,7 @@ const NavBar = () => {
 
             <div className={`nav-links ${isActive ? 'active' : ''}`}>
               <a href="/plan-trip">Plan A Trip</a>
-              <a href="/trips">Itineraries</a>
+              <a href="/itinerary">Itineraries</a>
               <a href="/about-us">About Us</a>
               {/* <a href="/faq">FAQ</a> */}
               <a href="/account">Account</a>
