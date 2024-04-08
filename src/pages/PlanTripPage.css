@@ -20,7 +20,7 @@
       height: 83vh;
       width: 100%;
       border-radius: 20px 20px 0 0;
-      margin-top: 70px;
+      margin-top: 68px;
       z-index: 0;
       position: relative;
     }
@@ -59,6 +59,10 @@
     }
 
     @media (max-width: 768px) {
+      .plan-trip-container {
+        margin-top: 98px;
+      }
+
       .form-title {
         font-size: 1.6rem;
       }

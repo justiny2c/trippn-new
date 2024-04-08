@@ -19,7 +19,7 @@
     height: 650px;
     width: 100%;
     border-radius: 20px 20px 0 0;
-    margin-top: 70px;
+    margin-top: 68px;
     z-index: 0;
     position: relative;
   }
@@ -90,6 +90,10 @@
 
 
       @media (max-width: 768px) {
+        .hero {
+          margin-top: 98px;
+        }
+
         .hero-title, .hero-statement {
           font-size: 2rem;
         }
