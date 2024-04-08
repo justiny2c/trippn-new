@@ -60,14 +60,14 @@ const PlanTripPage = () => {
                 value={tripDetails.endDate}
                 onChange={handleInputChange}
               />
-              <input
+              {/* <input
                 type="number"
                 name="travelers"
                 placeholder="# of Travelers"
                 value={tripDetails.travelers}
-                onChange={handleInputChange}
-              />
-              <button type="submit" className="build-itinerary-button">Build</button>
+                onChange=handleInputChange}
+              /> */}
+              <button type="submit" className="build-itinerary-button">Build Itinerary</button>
             </form>
           </div>
         </div>

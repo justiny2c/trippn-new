@@ -7,7 +7,7 @@
 }
 
   .plan-trip-container {  
-      background-image: url('../images/annie-spratt-qyAka7W5uMY-unsplash.jpg'), linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2));
+      background-image: url('../images/annie-spratt-qyAka7W5uMY-unsplash.jpg'), linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.35));
       background-blend-mode: overlay;
       background-size: cover;
       color: white;
@@ -33,8 +33,8 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      /* padding: 50px; */
       border-radius: 10px;
+      margin: 10px;
       width: 75%;
     }
 
@@ -83,6 +83,7 @@
     form {
       display: flex;
       flex-flow: row wrap;
+      justify-content: space-evenly;
       padding: 5px 10px;
     }
     
@@ -98,9 +99,10 @@
     input {     
       background-color: transparent; 
       font-family: 'Saira', serif;
-      font-size: .8rem;
+      font-size: 1rem;
       font-weight: 300;
-      letter-spacing: 1.1px;      
+      letter-spacing: 1.1px; 
+      color: white;     
       margin: 5px 20px 5px 0;
       padding: 15px;
       border: none;
@@ -108,17 +110,21 @@
 
     input:focus {
       outline: none;
-      /* box-shadow: 0 0 4px #4D90FE; Adds a glow effect */
     }
     
-
     input::placeholder {
       color: white; /* Needed for placeholder text color */
+      font-size: .82rem;
     }
+
+    /* input[type="text"] {
+      font-size: .9rem; /* Adjust this value to change the font size */
+    /* }  */
 
     input[type="date" i] {
       font-family: 'Saira', serif;
       color:white;
+      font-size: .82rem;
       text-transform: uppercase;
     }
 
@@ -140,13 +146,12 @@
       font-size: 1rem;
       font-weight: 400;
       letter-spacing: 1.1px;
-      width: 120px;
+      width: 200px;
     }
 
     @media (max-width: 768px) {
       .build-itinerary-button {
-        margin: 7px;
-        width: 150px;
+        margin: 10px 15px;
       }
     }
     
