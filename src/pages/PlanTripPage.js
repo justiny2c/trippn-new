@@ -18,10 +18,25 @@ const PlanTripPage = () => {
     });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handle the submit action (e.g., make an API call)
-    console.log(tripDetails);
+  const handleSubmit = async (e) => {
+    try {
+      const response = await fetch('http://127.0.0.1:5000/api/chat', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(tripDetails),
+      });
+      
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      
+      const data = await response.json();
+      console.log(data); // Display the response data as needed
+    } catch (error) {
+      console.error('There was a problem with the fetch operation:', error);
+    }
   };
 
   return (
@@ -33,7 +48,7 @@ const PlanTripPage = () => {
           </div>
           <p className='form-action'>LET'S GO!</p>
           <div className="form-container">
-            <form onSubmit={handleSubmit}>
+            <form>
               <input
                 type="text"
                 name="from"
@@ -67,7 +82,9 @@ const PlanTripPage = () => {
                 value={tripDetails.travelers}
                 onChange=handleInputChange}
               /> */}
-              <button type="submit" className="build-itinerary-button">Build Itinerary</button>
+
+              {/* //Note the use of type="button" for the button. By default, a button inside a form acts as a submit button (type="submit"), which can trigger a form submission. Specifying type="button" ensures that the button doesn't inherently submit the form and only performs actions defined in the onClick handler. */}
+              <button type="button" className="build-itinerary-button" onClick={handleSubmit}>Build Itinerary</button> 
             </form>
           </div>
         </div>
