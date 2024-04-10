@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import LogoWhite from "../images/trippn-white-sm.png"
+import LogoWhite from "../images/trippn-new-white-sm.png"
 import brainIcon from '../icons/brain.svg';
 import gemIcon from '../icons/gem.svg';
 import plannerIcon from '../icons/planner.svg';

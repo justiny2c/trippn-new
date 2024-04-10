@@ -137,6 +137,7 @@
     .section-statement {
       font-size: 2rem;
       margin: 0;
+      text-wrap: nowrap;
     }
       .two {
         margin-top: -55px;
@@ -148,16 +149,17 @@
       font-style: italic;
       font-size: 3.5rem;
       margin-right: 30px;
-      margin-top: -70px;
+      margin-top: -65px;
     }
 
     @media (max-width: 768px) {
       .section-statement {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
       }
 
       .section-emphasis {
-        margin-top: -60px;
+        font-size: 3rem;
+        margin-top: -55px;
       }
     }
 
