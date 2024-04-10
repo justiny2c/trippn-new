@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import LogoBlue from "../images/trippn-new-blue-sm.png"
+import LogoBlue from "../icons/trippn-new-blue-sm.png"
 import {NavLink} from 'react-router-dom';
 import './NavBar.css';
 
