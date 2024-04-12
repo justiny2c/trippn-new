@@ -42,7 +42,7 @@ const ScheduleDisplay = () => {
         currentDay.content.push(<div key={currentTimeBlock.key} className="time-block">{currentTimeBlock.content}</div>);
       }
       if (currentDay) {
-        formattedSchedule.push(<div key={currentDay.key} className="day">{currentDay.content}</div>);
+        formattedSchedule.push(<div key={currentDay.key} className="time-block">{currentDay.content}</div>);
       }
 
       return (

@@ -37,10 +37,11 @@
     }
 
   .response-container {
+    background: rgba(255, 255, 255, .92);
     display: flex;
     flex-direction: column;
     padding: 20px;
-    width: 50%;  
+    width: 25%;  
     height: 60vh;
     overflow-y: auto; /* This will add a scrollbar if the content exceeds the height */
     overflow-x: hidden; /* This prevents horizontal scrolling */
