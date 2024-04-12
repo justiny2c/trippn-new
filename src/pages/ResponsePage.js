@@ -49,7 +49,8 @@ const ScheduleDisplay = () => {
         <div className='response-page'>
             <div className='response-section'>
                 <div className='response-intro'>
-                    <p className='response-statement'>Hello</p>
+                    <p className='response-title'>Your Itinerary is Ready!</p>
+                    <p className='response-statement'>Congratulations! Your personalized travel itinerary is crafted and ready to guide you through an unforgettable journey. </p>
                 </div>
                 <div className='response-container'>
                     {formattedSchedule}
