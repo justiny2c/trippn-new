@@ -35,13 +35,13 @@ const HomePage = () => {
           <p className="hero-title">Plan Your Next Adventure</p>
           <div className='hero-statement-action'>
             <p className="hero-statement">For Unforgettable Memories</p>
-            <button className="cta-button" onClick={navigateToPlanTrip}>
-              <img src={LogoWhite} className="logo-button" alt="Trippn Logo" />
+            <button className="action-button one" onClick={navigateToPlanTrip}>
+              <img src={LogoWhite} className="button-logo" alt="Trippn Logo" />
             </button>
           </div>
         </div>
       </header>
-      <div className='section-container'>
+      <div className='section-container one'>
         <p className='section-why'>WHY?</p>
         <div className='section-title'>
           <p className='section-statement one'>
@@ -71,6 +71,10 @@ const HomePage = () => {
             title="AI-Powered Itineraries, Just for You"
             description="Innovative technology behind personalized travel planning"
           />
+        </div>      
+        <div className='section-container two'>        
+          <p className='section-statement three'> Ready to start your journey? </p>
+          <button className="action-button two" onClick={navigateToPlanTrip}>Create your itinerary now!</button>
         </div>
       </div>
     </div>

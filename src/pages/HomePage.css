@@ -61,7 +61,7 @@
         text-wrap: nowrap;
       }
 
-      .cta-button {
+      .action-button {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -69,7 +69,6 @@
         border: none;
         padding: 5px 15px;
         color: white;
-        text-transform: uppercase;
         cursor: pointer;
         border-radius: 3px;
         margin: 10px 5px;
@@ -77,15 +76,24 @@
         height: 40px;
       }
 
-      .cta-button:hover {
+      .action-button.two {
+        font-family: "Saira", serif;
+        font-size: 1.1rem;
+        font-weight: 400;
+        text-wrap: nowrap;
+        width: 250px;
+      }
+
+      .action-button:hover {
         box-shadow: 4px 4px lightslategray;
         transform: scale(1.1);
       }
 
-      .logo-button {
+      .button-logo {
         height: 1.5rem;
         padding: 5px;
       }
+
 
 
 
@@ -139,9 +147,13 @@
       margin: 0;
       text-wrap: nowrap;
     }
-      .two {
+      .section-statement.two {
         margin-top: -55px;
         margin-left: 10px;
+      }
+
+      .section-statement.three {
+        margin: 30px 30px 20px 30px;
       }
 
     .section-emphasis {
@@ -217,7 +229,5 @@
       font-size: .9rem;
       margin-bottom: 10px;
     }
-
-
   }     
 
