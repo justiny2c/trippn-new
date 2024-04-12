@@ -1,0 +1,73 @@
+
+.response-page {  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .response-section {
+    background-image: url('../images/caroline-selfors-r2jpr8MDw0I-unsplash.jpg'), linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2));
+    background-blend-mode: overlay;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px 20px 0 0;
+    margin-top: 70px;
+    height: 82.5vh;
+    width: 100%;
+  }
+
+  .response-intro {
+    padding: 20px;
+    width: 50%;
+    /* height: 100%; */
+  }
+
+    .response-statement {
+        font-family: "Noto Serif", serif;
+        font-style: italic;
+        font-size: 2.8rem;
+        font-weight: 500;
+        padding: 5px;
+        margin: 0;
+        color:white;
+    }
+
+  .response-container {
+    background: rgba(255, 255, 255, .92);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 25%;  
+    height: 60vh;
+    overflow-y: auto; /* This will add a scrollbar if the content exceeds the height */
+    overflow-x: hidden; /* This prevents horizontal scrolling */
+  }
+
+  .day-container {
+    padding: 10px;
+  }
+
+
+    .day {
+        font-size: .9rem;
+        font-weight: 500;
+        padding: 10px;
+        margin: 12px 0;
+        color: #717568;
+        border-bottom: 1.9px solid #717568;
+    }
+
+    strong {
+        font-size: 1rem;
+        font-weight: 600;
+    }
+
+    .activity {
+        font-size: .85rem;
+        margin: 8px 0;
+    }
+
