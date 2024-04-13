@@ -1,7 +1,7 @@
-# trippin
+# Trippn AI
 
-### This is an AI-powered chatbot that assists users in planning trips, suggesting destinations, finding accommodation options, and recommending activities based on budget and interests. ChatGPT could help users explore travel preferences, provide destination insights, and generate itineraries.
-
+## Description
+Trippn empowers travelers to design their adventures from the ground up. Using intelligent recommendations and a user-friendly interface, the app curates a travel experience that aligns with your interests, budget, and timeline. Whether you're planning a solo retreat or a group trip, Trippn makes it easy to navigate your options and keep everyone informed.
 
 ## Available Scripts
 
