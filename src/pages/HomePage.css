@@ -29,6 +29,7 @@
     position: absolute;
     top: 10%;
     left: 2%; 
+    width: auto;
   }
 
     .hero-mission {
@@ -165,6 +166,10 @@
     }
 
     @media (max-width: 768px) {
+      .section-title {
+        margin-bottom: 20px;
+      }
+
       .section-statement {
         font-size: 1.5rem;
       }
@@ -180,6 +185,7 @@
       flex-flow: row wrap;
       justify-content: space-evenly;
       margin: 20px;
+      width: 100%;
     }
 
     .value-card {
@@ -189,7 +195,7 @@
       background-color: aliceblue;
       border-radius: 40px;
       padding: 10px;
-      margin: 10px 20px;
+      margin: 15px 10px;
       height: 280px;
       width: 250px;      
     }
@@ -219,6 +225,7 @@
     @media (max-width: 768px) {
     .card-container {
       flex-direction: column;
+      align-items: center;
     }
 
     .value-card {
