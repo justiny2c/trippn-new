@@ -7,7 +7,7 @@
   }
   
   .hero {
-    background-image: url('../images/ethan-dow-xssEs_oCv-A-unsplash.jpg'), linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2));
+    background-image: url('../images/ethan-dow-xssEs_oCv-A-unsplash.jpg'), linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3));
     background-blend-mode: overlay;
     background-size: cover;
     background-position: bottom 100px;
@@ -212,11 +212,13 @@
       }
 
       .value-card h3 {
-        margin: 10px 0 15px;
+        font-size: 1.1rem;
+        margin: 10px 0;
         font-weight:550;
       }
 
       .value-card p {
+        font-size: .9rem;
         margin:0;
       }
 
