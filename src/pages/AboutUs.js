@@ -1,5 +1,4 @@
 import React from 'react';
-// import aboutImage from '../images/justin-anderson-KnlgZ-3LOLk-unsplash.jpg'; 
 import './AboutUs.css'; 
 
 const AboutUs = () => {
