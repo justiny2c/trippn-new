@@ -1,13 +1,16 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
+import 'react-big-calendar/lib/css/react-big-calendar.css';
+import './App.css';
+
 import HomePage from './HomePage';
 import PlanTripPage from './PlanTripPage';
 import NavBar from '../components/NavBar';
-// import ItineraryPage from './ItineraryPage';
 import AboutUs from './AboutUs';
 import ResponsePage from "./ResponsePage"
 import Footer from '../components/Footer';
-import './App.css';
+import MyCalendar from "./Calendar"
+
 
 function App() {
   return (
@@ -18,7 +21,7 @@ function App() {
           <Route path="/plan-trip" element={<PlanTripPage />} />
           <Route path="/itinerary" element={<ResponsePage />} />
           <Route path="/about-us" element={<AboutUs />} />
-          {/* <Route path="/chat" element={<ChatGPT />} /> */}
+          <Route path="/calendar" element={<MyCalendar />} />
         </Routes>
        <Footer /> 
     </div>
