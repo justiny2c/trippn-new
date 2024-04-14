@@ -1,6 +1,6 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { ItineraryProvider } from './contexts/ItineraryContext';
+import { ItineraryProvider } from '../contexts/ItineraryContext';
 import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
 import HomePage from './HomePage';
