@@ -1,0 +1,75 @@
+
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px 20px 0 0;
+    margin-top: 70px;
+    width: 100%;
+    height: 83vh;
+}
+
+@media (max-width: 768px) {
+    .login-page {
+        margin-top: 100px;
+    }
+}
+
+.login-hero {
+    background-image: url('../images/ben-neale-EC_GhFRGTAY-unsplash.jpg'), linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3));
+    background-blend-mode: overlay;
+    background-size: cover;
+    border-radius: 20px;
+    width: 50%;
+    height: 99%;
+}
+
+.login-auth {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+}
+
+.login-auth div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+
+/* this div extends buttons width wise */
+.login-auth div div {
+    width: 100%;
+}
+
+/* button, label, input, anchor classnames */
+.c-bOcPnF, .c-bpexlo, .c-dEnagJ, .c-dumjqv {
+    font-family: "Saira", sans-serif;
+}
+
+/* input margin */
+.c-dEnagJ {
+    margin: 2px 0px;
+}
+
+button {
+    margin: 2px;
+}
+
+.c-bOcPnF-cmFMMs-color-primary {
+    font-size: 1rem;
+    font-weight: 450;
+    background-color: #5194f1;
+    border: none;
+}
+
+.c-bOcPnF-cmFMMs-color-primary:hover:not(:disabled) {
+    background-color: #18a02e;
+}
+
+.login-auth div form {
+    padding: 0;
+}

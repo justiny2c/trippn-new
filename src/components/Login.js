@@ -5,14 +5,22 @@ import {
   // Import predefined theme
   ThemeSupa,
 } from '@supabase/auth-ui-shared'
+import "./Login.css"
+
 
 const Login = () => (
     <div className='login-page'>
-        <Auth
-        supabaseClient={supabase}
-        appearance={{ theme: ThemeSupa }}
-        providers={['google', 'facebook', 'twitter']}
-        />
+        <div className='login-hero'>
+
+        </div>
+        <div className='login-auth'>
+            <Auth
+            className="testing"
+            supabaseClient={supabase}
+            appearance={{ theme: ThemeSupa }}
+            providers={['google', 'facebook', 'twitter']}
+            />
+        </div>
     </div>
   )
 
