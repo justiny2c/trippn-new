@@ -74,7 +74,11 @@
       align-items: center;
       padding: 15px 0 10px 0;
     }
-    /* Display the hamburger menu icon */
+
+    .logo {
+      margin-left: 0;
+    }
+    
     .hamburger {
       cursor: pointer;
       display: flex;
