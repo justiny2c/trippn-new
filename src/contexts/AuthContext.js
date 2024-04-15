@@ -8,30 +8,31 @@ export function useAuth() {
 }
 
 export const AuthProvider = ({ children }) => {
-  const [user, setUser] = useState(null);
-  const [loading, setLoading] = useState(true);
+
+  const [session, setSession] = useState(null);
 
   useEffect(() => {
-    // Check active session and set user
-    const session = supabase.auth.getSession();
-    setUser(session?.user || null);
-    setLoading(false);
+    supabase.auth.getSession().then(({ data: { session } }) => {
+        setSession(session);
+      });
+    console.log('Session data:', session);  
 
-    // Listen for changes on authentication state (login, signup, logout)
-    const { data: authListener } = supabase.auth.onAuthStateChange(async (event, session) => {
-      setUser(session?.user || null);
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
+        setSession(session);
     });
 
     return () => {
-      authListener.unsubscribe();
+        console.log('Cleaning up auth listener');
+        subscription.unsubscribe();
     };
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
-  const value = { user, loading };
+  console.log('Rendering AuthProvider, session:', session);
 
   return (
-    <AuthContext.Provider value={value}>
-      {!loading && children}
+    // <AuthContext.Provider value={value}>
+    <AuthContext.Provider value={{ session }}>
+      {!session && children}
     </AuthContext.Provider>
   );
 };
