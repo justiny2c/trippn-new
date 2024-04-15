@@ -1,5 +1,6 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
+import ProtectedRoute from '../components/ProtectedRoute';
 import { AuthProvider } from '../contexts/AuthContext';
 import { ItineraryProvider } from '../contexts/ItineraryContext';
 import NavBar from '../components/NavBar';
@@ -23,10 +24,12 @@ function App() {
                 <Routes>
                   <Route exact path="/" element={<HomePage />} />
                   <Route path="/login" element={<Login />} />
-                  <Route path="/plan-trip" element={<PlanTripPage />} />
-                  <Route path="/itinerary" element={<ResponsePage />} />
-                  <Route path="/about-us" element={<AboutUs />} />
-                  <Route path="/calendar" element={<MyCalendar />} />
+                  <Route path="/" element={<ProtectedRoute />}>
+                      <Route path="plan-trip" element={ <PlanTripPage />} />
+                      <Route path="/itinerary" element={<ResponsePage />} />
+                      <Route path="/about-us" element={<AboutUs />} />
+                      <Route path="/calendar" element={<MyCalendar />} />
+                  </Route>
                 </Routes>
               <Footer />                 
         </ItineraryProvider>
