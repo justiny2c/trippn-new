@@ -7,9 +7,9 @@ import Footer from '../components/Footer';
 import Login from "../components/Login";
 import HomePage from './HomePage';
 import PlanTripPage from './PlanTripPage';
-import ResponsePage from "./ResponsePage"
+import ResponsePage from "./ResponsePage";
 import AboutUs from './AboutUs';
-import MyCalendar from "./Calendar"
+import MyCalendar from "./Calendar";
 import 'react-big-calendar/lib/css/react-big-calendar.css';
 import './App.css';
 
