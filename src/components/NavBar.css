@@ -41,7 +41,7 @@
     transform: scale(1.05);
   }
 
-  /* Initially hide the hamburger menu */
+  /* Initially hides the hamburger menu */
   .hamburger {
     display: none;
   }
@@ -78,7 +78,7 @@
     .logo {
       margin-left: 0;
     }
-    
+
     .hamburger {
       cursor: pointer;
       display: flex;
@@ -107,7 +107,6 @@
       display: flex;
       align-items: center;
       width: 100%;      
-      /* background-color: rgba(255,255,255, 0.3); */
     }
   }
 
