@@ -1,10 +1,10 @@
 import React from 'react';
 import supabase from '../api/supabaseClient';
-import { Auth } from '@supabase/auth-ui-react'
+import { Auth } from '@supabase/auth-ui-react';
 import {
   // Import predefined theme
   ThemeSupa,
-} from '@supabase/auth-ui-shared'
+} from '@supabase/auth-ui-shared';
 import "./Login.css"
 
 

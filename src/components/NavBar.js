@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import LogoBlue from "../icons/trippn-new-blue-sm.png"
 import {NavLink} from 'react-router-dom';
+import { useAuth } from '../contexts/AuthContext';
 import './NavBar.css';
 
-const NavBar = () => {
 
+
+const NavBar = () => {
   const [isActive, setIsActive] = useState(false);
-  // const [isOpen, setIsOpen] = useState(false);
+  const { user, signOut } = useAuth();
 
   return (
     <div>
@@ -19,13 +21,12 @@ const NavBar = () => {
               <div className={`bar2 ${isActive ? 'change' : ''}`}></div>
               <div className={`bar3 ${isActive ? 'change' : ''}`}></div>
             </div>
-
             <div className={`nav-links ${isActive ? 'active' : ''}`}>
-              <a href="/plan-trip">Plan A Trip</a>
-              <a href="/itinerary">Itineraries</a>
-              <a href="/about-us">About Us</a>
-              {/* <a href="/faq">FAQ</a> */}
-              <a href="/account">Account</a>
+              <NavLink to="/plan-trip">Plan A Trip</NavLink>
+              <NavLink to="/itinerary">Itineraries</NavLink>
+              <NavLink to="/about-us">About Us</NavLink>
+              <NavLink to="/account">Account</NavLink>
+              {user && <button onClick={signOut} className="sign-out-button">Sign Out</button>}
             </div>
       </nav>
     </div>

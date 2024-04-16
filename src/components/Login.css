@@ -48,12 +48,14 @@
 /* button, label, input, anchor classnames */
 .c-bOcPnF, .c-bpexlo, .c-dEnagJ, .c-dumjqv {
     font-family: "Saira", sans-serif;
+    color: black;
 }
 
 /* input margin */
 .c-dEnagJ {
     margin: 2px 0px;
 }
+
 
 button {
     margin: 2px;
@@ -62,6 +64,7 @@ button {
 .c-bOcPnF-cmFMMs-color-primary {
     font-size: 1rem;
     font-weight: 450;
+    color: white;
     background-color: #5194f1;
     border: none;
 }
