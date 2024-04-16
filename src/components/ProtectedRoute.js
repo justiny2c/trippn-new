@@ -3,9 +3,10 @@ import { Navigate, Outlet } from "react-router-dom";
 import { useAuth } from "../contexts/AuthContext";
 
 const ProtectedRoute = () => {
-    const { session } = useAuth();
+    const { user } = useAuth();
+    console.log`${ user }`
 
-    if (!session) {
+    if (!user) {
         // If not logged in, redirect to the login page
         return <Navigate to="/login" replace />;
     }

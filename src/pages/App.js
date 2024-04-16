@@ -26,9 +26,9 @@ function App() {
                   <Route path="/login" element={<Login />} />
                   <Route path="/" element={<ProtectedRoute />}>
                       <Route path="plan-trip" element={ <PlanTripPage />} />
-                      <Route path="/itinerary" element={<ResponsePage />} />
-                      <Route path="/about-us" element={<AboutUs />} />
-                      <Route path="/calendar" element={<MyCalendar />} />
+                      <Route path="itinerary" element={<ResponsePage />} />
+                      <Route path="about-us" element={<AboutUs />} />
+                      <Route path="calendar" element={<MyCalendar />} />
                   </Route>
                 </Routes>
               <Footer />                 

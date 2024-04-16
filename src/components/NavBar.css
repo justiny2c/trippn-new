@@ -26,6 +26,7 @@
     display: flex;
     white-space: nowrap;
     justify-content: space-between;
+    align-items: center;
     width: 400px;
   }
   
@@ -39,6 +40,24 @@
   .nav-links a:hover {
     color: #5194f1;
     transform: scale(1.05);
+  }
+
+  .sign-out-button {
+    font-family: "Saira", sans-serif;
+    font-size: .9rem;
+    font-weight: 450;
+    background-color: rgb(226, 226, 226);
+    border: 1px solid black;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+    margin: 10px 5px;
+  }
+
+  .sign-out-button:hover {
+    background-color: crimson;
+    color: white;
+    border: 1px solid transparent;
   }
 
   /* Initially hides the hamburger menu */
@@ -109,5 +128,3 @@
       width: 100%;      
     }
   }
-
-

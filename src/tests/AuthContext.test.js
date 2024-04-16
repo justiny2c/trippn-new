@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 import { AuthProvider, useAuth } from '../contexts/AuthContext';
 
 // Mock hook if needed
-jest.mock('./useAuth');
+// jest.mock('./useAuth');
 
 describe('AuthProvider', () => {
   it('renders children when user is logged in', () => {

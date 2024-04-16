@@ -48,13 +48,14 @@
 /* button, label, input, anchor classnames */
 .c-bOcPnF, .c-bpexlo, .c-dEnagJ, .c-dumjqv {
     font-family: "Saira", sans-serif;
-    color: rgb(41, 41, 41);
+    color: black;
 }
 
 /* input margin */
 .c-dEnagJ {
     margin: 2px 0px;
 }
+
 
 button {
     margin: 2px;
