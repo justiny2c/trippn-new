@@ -1,21 +1,51 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import supabase from '../api/supabaseClient';
 import './PlanTripPage.css';
 
 const PlanTripPage = () => {
+
+  // const { data: { user } } = supabase.auth.getUser()
+  // const user_id = user.id
+  // console.log("Here is my user.id", user_id)
+  const [userId, setUserId] = useState(null);
   const [tripDetails, setTripDetails] = useState({
-    from: '',
-    to: '',
-    startDate: '',
-    endDate: '',
-    travelers: '',
+      userId: '',
+      from: '',
+      to: '',
+      startDate: '',
+      endDate: '',
+      travelers: '',
   });
 
+  useEffect(() => {
+      const fetchUserId = async () => {
+          const user = supabase.auth.getUser();
+          if (user) {
+              setUserId(user.id);
+          } else {
+              console.error('No user found');
+          }
+      };
+
+      fetchUserId();
+  }, []);
+
+  useEffect(() => {
+      // This effect updates tripDetails whenever userId changes
+      if (userId) {
+          setTripDetails(prevDetails => ({
+              ...prevDetails,
+              userId: userId
+          }));
+      }
+  }, [userId]);
+
   const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setTripDetails({
-      ...tripDetails,
-      [name]: value,
-    });
+      const { name, value } = e.target;
+      setTripDetails(prevDetails => ({
+          ...prevDetails,
+          [name]: value,
+      }));
   };
 
   const handleSubmit = async (e) => {
@@ -27,13 +57,13 @@ const PlanTripPage = () => {
         },
         body: JSON.stringify(tripDetails),
       });
-      
+      console.log("userId", tripDetails.userId)
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
       
       const data = await response.json();
-      console.log(data); // Display the response data as needed
+      console.log(data);
     } catch (error) {
       console.error('There was a problem with the fetch operation:', error);
     }

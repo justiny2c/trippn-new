@@ -11,7 +11,6 @@ export const AuthProvider = ({ children }) => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        // Function to fetch and set the session data
         const setData = async () => {
             try {
                 const { data, error } = await supabase.auth.getSession();
@@ -24,7 +23,6 @@ export const AuthProvider = ({ children }) => {
             }
         };
 
-        // Establishing a real-time listener for auth state changes
         const { data: listener } = supabase.auth.onAuthStateChange((event, session) => {
             console.log('Auth event:', event); // Log auth events for debugging
             setSession(session);
