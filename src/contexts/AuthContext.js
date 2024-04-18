@@ -53,38 +53,3 @@ export const AuthProvider = ({ children }) => {
 };
 
 
-
-
-
-
-
-// export const AuthProvider = ({ children }) => {
-    
-//   const [session, setSession] = useState(null);
-
-//   useEffect(() => {
-//     console.log('Checking session state...');
-//     supabase.auth.getSession().then(({ data: { session } }) => {
-//         setSession(session);
-//       });
-//     console.log('Session data:', session);  
-
-//     const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
-//         setSession(session);
-//     });
-
-//     return () => {
-//         console.log('Cleaning up auth listener');
-//         subscription.unsubscribe();
-//     };
-//   }, []); // eslint-disable-line react-hooks/exhaustive-deps
-
-//   console.log('Rendering AuthProvider, session:', session);
-
-//   return (
-//     // <AuthContext.Provider value={value}>
-//     <AuthContext.Provider value={{ session }}>
-//       {session && children}
-//     </AuthContext.Provider>
-//   );
-// };

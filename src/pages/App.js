@@ -28,10 +28,10 @@ function App() {
                   <Route path="/" element={<ProtectedRoute />}>
                       <Route path="plan-trip" element={ <PlanTripPage />} />
                       <Route path="itinerary" element={<ResponsePage />} />
-                      <Route path="about-us" element={<AboutUs />} />
                       <Route path="calendar" element={<MyCalendar />} />
                       <Route path="loading" element={<LoadingScreen />} />
                   </Route>
+                  <Route path="about-us" element={<AboutUs />} />
                 </Routes>
               <Footer />                 
         </ItineraryProvider>
