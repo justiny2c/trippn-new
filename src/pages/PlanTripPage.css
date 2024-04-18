@@ -113,6 +113,10 @@
       border: none;
     }
 
+    input.filled {
+      background-color: transparent;  /* Light gray background when filled */
+    }
+
     input:focus {
       outline: none;
     }
