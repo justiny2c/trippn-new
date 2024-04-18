@@ -1,0 +1,84 @@
+.loading-screen {
+    border-radius: 20px 20px 0 0;
+    margin-top: 70px;
+    height: 100vh;
+}
+
+@keyframes slideInDiagonallyFromTop {
+    from {
+      transform: translateY(-100%) translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0) translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInDiagonallyFromBottom {
+    from {
+      transform: translateY(100%) translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0) translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  
+  .image-container {
+    position: relative;
+    /* Other styles to position your images, if necessary */
+  }
+
+  img {
+    width: 25%;
+  }
+
+  .image1 {
+    animation: slideInDiagonallyFromTop 1s ease-out forwards;
+  }
+  
+  .image2 {
+    animation: slideInDiagonallyFromBottom 1s ease-out forwards 1s; /* This starts after 1 second */
+  }
+  
+
+  
+  /* Loading Text Style */
+  .loading-text {
+    position: absolute;
+    top: 50%; /* Adjust as necessary for the desired position */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Styles for your loading text */
+    animation: blink 1.5s step-start infinite;
+  }
+  
+  @keyframes dots {
+    0%, 20% {
+      color: rgba(0,0,0,0);
+      text-shadow:
+        .25em 0 0 rgba(0,0,0,0),
+        .5em 0 0 rgba(0,0,0,0);
+    }
+    40% {
+      color: black;
+      text-shadow:
+        .25em 0 0 rgba(0,0,0,0),
+        .5em 0 0 rgba(0,0,0,0);
+    }
+    60% {
+      text-shadow:
+        .25em 0 0 black,
+        .5em 0 0 rgba(0,0,0,0);
+    }
+    80%, 100% {
+      text-shadow:
+        .25em 0 0 black,
+        .5em 0 0 black;
+    }
+  }
+  
+

@@ -11,6 +11,7 @@ import PlanTripPage from './PlanTripPage';
 import ResponsePage from "./ResponsePage";
 import AboutUs from './AboutUs';
 import MyCalendar from "./Calendar";
+import LoadingScreen from './LoadingScreen';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
 import './App.css';
 
@@ -29,6 +30,7 @@ function App() {
                       <Route path="itinerary" element={<ResponsePage />} />
                       <Route path="about-us" element={<AboutUs />} />
                       <Route path="calendar" element={<MyCalendar />} />
+                      <Route path="loading" element={<LoadingScreen />} />
                   </Route>
                 </Routes>
               <Footer />                 
