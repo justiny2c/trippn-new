@@ -9,12 +9,6 @@
     height: 83vh;
 }
 
-@media (max-width: 768px) {
-    .login-page {
-        margin-top: 100px;
-    }
-}
-
 .login-hero {
     background-image: url('../images/ben-neale-EC_GhFRGTAY-unsplash.jpg'), linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3));
     background-blend-mode: overlay;
@@ -32,12 +26,36 @@
     height: 100%;
 }
 
+
+
 .login-auth div {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 80%;
+}
+
+@media (max-width: 768px) {
+    .login-page {
+        flex-direction: column;
+        margin-top: 100px;
+        height: auto;
+    }
+
+    .login-hero {
+        width: 95%;
+        margin: 2px;
+        height: 250px;
+    }
+
+    .login-auth {
+        width: 100%;
+    }
+
+    .login-auth div {
+        width: 95%;
+    }
 }
 
 /* this div extends buttons width wise */
