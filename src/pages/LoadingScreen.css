@@ -1,27 +1,29 @@
 .loading-screen {
+    display: flex;
+    overflow: hidden;
     border-radius: 20px 20px 0 0;
     margin-top: 70px;
     height: 100vh;
 }
 
-@keyframes slideInDiagonallyFromTop {
+@keyframes slideFromTop {
     from {
-      transform: translateY(-100%) translateX(-100%);
+      transform: translateY(-100%); /* start above the screen */
       opacity: 0;
     }
     to {
-      transform: translateY(0) translateX(0);
+      transform: translateY(0); /* end at its final position */
       opacity: 1;
     }
   }
   
-  @keyframes slideInDiagonallyFromBottom {
+  @keyframes slideFromBottom {
     from {
-      transform: translateY(100%) translateX(100%);
+      transform: translateY(100%); /* start below the screen */
       opacity: 0;
     }
     to {
-      transform: translateY(0) translateX(0);
+      transform: translateY(0); /* end at its final position */
       opacity: 1;
     }
   }
@@ -29,56 +31,60 @@
   
   .image-container {
     position: relative;
+    z-index: 5;
     /* Other styles to position your images, if necessary */
   }
 
   img {
     width: 25%;
+    height: 100%;
+    object-fit: cover;
   }
 
   .image1 {
-    animation: slideInDiagonallyFromTop 1s ease-out forwards;
+    animation: slideFromTop 1s forwards;
+    animation-delay: 0s
   }
   
   .image2 {
-    animation: slideInDiagonallyFromBottom 1s ease-out forwards 1s; /* This starts after 1 second */
+    animation: slideFromBottom 1s forwards;
+    animation-delay: 0.5s
+  }
+
+  .image3 {
+    animation: slideFromTop 1s forwards;
+    animation-delay: 1s
+  }
+  
+
+  .image4 {
+    animation: slideFromBottom 1s forwards;
+    animation-delay: 1.5s
   }
   
 
   
-  /* Loading Text Style */
   .loading-text {
-    position: absolute;
-    top: 50%; /* Adjust as necessary for the desired position */
-    left: 50%;
-    transform: translate(-50%, -50%);
-    /* Styles for your loading text */
-    animation: blink 1.5s step-start infinite;
+    position: absolute; /*Ensure it's positioned relative to its container */
+    top: 50%;
+    left: 44%;
+    /* transform: translate(-50%, -50%); */
+    color: white;       /* // Ensuring high contrast */
+    font-size: 24px;
+    opacity: 0;         /* Start hidden */
+    z-index: 10; /* any value higher than the images */
+    animation: fadeIn 1s forwards, stayVisible 6s forwards;
+    animation-delay: 2s, 3s; /* this delay should be after the last image animation */
   }
   
-  @keyframes dots {
-    0%, 20% {
-      color: rgba(0,0,0,0);
-      text-shadow:
-        .25em 0 0 rgba(0,0,0,0),
-        .5em 0 0 rgba(0,0,0,0);
-    }
-    40% {
-      color: black;
-      text-shadow:
-        .25em 0 0 rgba(0,0,0,0),
-        .5em 0 0 rgba(0,0,0,0);
-    }
-    60% {
-      text-shadow:
-        .25em 0 0 black,
-        .5em 0 0 rgba(0,0,0,0);
-    }
-    80%, 100% {
-      text-shadow:
-        .25em 0 0 black,
-        .5em 0 0 black;
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
     }
   }
-  
 
+  @keyframes stayVisible {
+    to {
+      opacity: 1; /* Keep the element visible */
+    }
+  }

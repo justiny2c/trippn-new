@@ -13,13 +13,14 @@ const LoadingScreen = () => {
       const timeouts = [
         setTimeout(() => {/* ... */}, 1000), // Trigger first image
         setTimeout(() => {/* ... */}, 2000), // Trigger second image
-        // Add more as needed
+        setTimeout(() => {/* ... */}, 3000), // Trigger third image
+        setTimeout(() => {/* ... */}, 4000), // Trigger fourth image
       ];
   
-      // After all animations, set loading to complete
+      // After 8 seconds, set loading to complete
       const loadingTimeout = setTimeout(() => {
         setLoadingComplete(true);
-      }, /* Set this to the total animation time */);
+      }, 8000); // Total animation time now 8 seconds
   
       return () => {
         // Cleanup timeouts if the component unmounts
@@ -34,7 +35,7 @@ const LoadingScreen = () => {
         <img className="image2" src={ Image2 } alt="Loading..." />
         <img className="image3" src={ Image3 } alt="Loading..." />
         <img className="image4" src={ Image4 } alt="Loading..." />
-        {!loadingComplete && <div className="loading-text">LOADING</div>}
+        {!loadingComplete && <div className="loading-text">LOADING...</div>}
       </div>
     );
   };
