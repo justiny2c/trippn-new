@@ -13,9 +13,31 @@
     background-image: url('../images/ben-neale-EC_GhFRGTAY-unsplash.jpg'), linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3));
     background-blend-mode: overlay;
     background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     border-radius: 20px;
+    color: white;
     width: 50%;
     height: 99%;
+}
+
+.login-title {
+    font-family: "Noto Serif", serif;
+    font-style: italic;
+    font-size: 1.6rem;
+    font-weight: 500;
+    padding: 5px;
+    margin: 0;
+}
+
+.login-statement {
+    font-size: 1.1rem;
+    font-weight: 300;
+    text-align: center;
+    padding: 20px;
+    margin: 5px;
 }
 
 .login-auth {
@@ -25,8 +47,6 @@
     width: 50%;
     height: 100%;
 }
-
-
 
 .login-auth div {
     display: flex;
@@ -47,6 +67,11 @@
         width: 95%;
         margin: 2px;
         height: 250px;
+    }
+
+    .login-statement {
+        font-size: .95rem;
+        padding: 10px;
     }
 
     .login-auth {
