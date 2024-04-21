@@ -29,11 +29,11 @@
     align-items: center;
   }
 
-  .one {
+  .nav-one {
     width: 400px
   }
 
-  .two {
+  .nav-two {
     width: auto;
     font-weight: 600;
   }
