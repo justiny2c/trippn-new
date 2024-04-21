@@ -25,9 +25,17 @@
   .nav-links {
     display: flex;
     white-space: nowrap;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    width: 400px;
+  }
+
+  .one {
+    width: 400px
+  }
+
+  .two {
+    width: auto;
+    font-weight: 600;
   }
   
   .nav-links a {
