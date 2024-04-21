@@ -102,7 +102,7 @@
     }
     
     input {     
-      background-color: transparent; 
+      background-color: transparent !important; 
       font-family: 'Saira', serif;
       font-size: 1rem;
       font-weight: 300;
@@ -111,10 +111,6 @@
       margin: 5px 10px 5px 0;
       padding: 15px;
       border: none;
-    }
-
-    input.filled {
-      background-color: transparent;  /* Light gray background when filled */
     }
 
     input:focus {

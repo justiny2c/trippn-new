@@ -21,11 +21,13 @@ const NavBar = () => {
               <div className={`bar2 ${isActive ? 'change' : ''}`}></div>
               <div className={`bar3 ${isActive ? 'change' : ''}`}></div>
             </div>
-            <div className={`nav-links ${isActive ? 'active' : ''}`}>
-              <NavLink to="/plan-trip">Plan A Trip</NavLink>
+            <div className={`nav-links one ${isActive ? 'active' : ''}`}>
+              <NavLink to="/plan-trip">Plan Trip</NavLink>
               <NavLink to="/itinerary">Itineraries</NavLink>
-              <NavLink to="/about-us">About Us</NavLink>
-              <NavLink to="/account">Account</NavLink>
+              <NavLink to="/about-us">About Us</NavLink>              
+            </div>
+            <div className={`nav-links two ${isActive ? 'active' : ''}`}>
+              <NavLink to="/login">Login</NavLink>
               {user && <button onClick={signOut} className="sign-out-button">Sign Out</button>}
             </div>
       </nav>

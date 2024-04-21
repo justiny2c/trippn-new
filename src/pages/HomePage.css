@@ -73,7 +73,7 @@
         cursor: pointer;
         border-radius: 3px;
         margin: 10px 5px;
-        width: 120px;
+        width: 130px;
         height: 40px;
       }
 
@@ -92,11 +92,9 @@
 
       .button-logo {
         height: 1.5rem;
-        padding: 5px;
+        padding: 8px;
+        width: 100%;
       }
-
-
-
 
       @media (max-width: 768px) {
         .hero {
@@ -221,7 +219,6 @@
         font-size: .9rem;
         margin:0;
       }
-
 
 
     @media (max-width: 768px) {
