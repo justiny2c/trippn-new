@@ -1,9 +1,7 @@
 /* AboutUs.css */
-
 .about-page {
     display: flex;
     justify-content: center;
-    height: 100vh;
   }
 
     .about-container {
@@ -61,18 +59,14 @@
         width: auto;
     }
 
-
-
-
-
     .text-section {
         display: flex;
         background: rgba(255, 255, 255, .92);
-        border-radius: 20px;
+        border-radius: 5px;
         padding: 10px 20px;
         margin: 3%;
         height: 70%;
-        width: 35%;
+        width: 45%;
     }
 
     .text-section p {

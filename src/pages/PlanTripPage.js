@@ -69,6 +69,7 @@ const PlanTripPage = () => {
           <div className="form-container">
             <form>
               <input
+                className='plan-trip-input'
                 type="text"
                 name="from"
                 placeholder="Traveling from..."
@@ -76,6 +77,7 @@ const PlanTripPage = () => {
                 onChange={handleInputChange}
               />
               <input
+                className='plan-trip-input'
                 type="text"
                 name="to"
                 placeholder="Traveling to..."
@@ -83,12 +85,14 @@ const PlanTripPage = () => {
                 onChange={handleInputChange}
               />
               <input
+                className='plan-trip-input'
                 type="date"
                 name="startDate"
                 value={tripDetails.startDate}
                 onChange={handleInputChange}
               />
               <input
+                className='plan-trip-input'
                 type="date"
                 name="endDate"
                 value={tripDetails.endDate}

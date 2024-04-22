@@ -4,10 +4,6 @@ import supabase from '../api/supabaseClient';
 import "./ResponsePage.css"
 
 
-
-
-// const ScheduleDisplay = ({ response }) => {
-
 const ScheduleDisplay = () => {
     const { user } = useAuth();
     const [itinerary, setItinerary] = useState([]);

@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Saira:wght@100..900&display=swap');
 
 body {
@@ -9,4 +13,8 @@ body {
   border-right: 5px solid white;
   color: #010B13;
   background-color: white;
+}
+
+img {
+  height: auto !important;
 }
