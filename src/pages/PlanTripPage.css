@@ -115,10 +115,12 @@
 
     input:focus {
       outline: none;
+      -webkit-box-shadow: none !important;
+      box-shadow: none !important;
     }
     
     input::placeholder {
-      color: white; /* Needed for placeholder text color */
+      color: white !important;
       font-size: .82rem;
     }
 

@@ -97,6 +97,11 @@
 /* input margin */
 .c-dEnagJ {
     margin: 2px 0px;
+    border-radius: 5px !important;
+}
+
+.c-dEnagJ::placeholder {
+    color: gray !important;
 }
 
 
