@@ -118,20 +118,19 @@
     
     .plan-trip-input::placeholder {
       color: white !important;
-      font-size: .82rem;
+      font-size: .85rem;
     }
 
     .plan-trip-input[type="date" i] {
       font-family: 'Saira', serif !important;
-      /* color:white; */
-      font-size: .82rem !important;
+      font-size: .85rem !important;
       text-transform: uppercase !important;
       text-align: start !important;
     }
 
     @media (max-width: 768px) {
       .plan-trip-input {
-        margin: 5px;
+        margin: 5px !important;
       }
     }
     
