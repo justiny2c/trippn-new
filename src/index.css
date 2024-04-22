@@ -2,18 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-input, textarea, select {
-  background-color: transparent;
-  font-family: 'Saira', serif !important;
-  font-size: 1rem;
-  font-weight: 300 !important;
-  letter-spacing: 1.1px; 
-  color: white;     
-  margin: 5px 10px 5px 0;
-  padding: 15px;
-  border: none;
-}
-
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Saira:wght@100..900&display=swap');
 
 body {
@@ -25,4 +13,8 @@ body {
   border-right: 5px solid white;
   color: #010B13;
   background-color: white;
+}
+
+img {
+  height: auto !important;
 }

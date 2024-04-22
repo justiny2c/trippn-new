@@ -1,3 +1,5 @@
-/* @tailwind base;
-@tailwind components;
-@tailwind utilities; */
+
+.calendar-page {
+  margin-top: 70px;
+  /* padding: 50px */
+}

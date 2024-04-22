@@ -101,39 +101,36 @@
       }
     }
     
-    input {     
+    .plan-trip-input {     
       background-color: transparent !important; 
-      font-family: 'Saira', serif;
-      font-size: 1rem;
-      font-weight: 300;
-      letter-spacing: 1.1px; 
-      color: white;     
-      margin: 5px 10px 5px 0;
-      padding: 15px;
+      font-family: 'Saira', serif !important;
+      font-size: 1rem !important;
+      font-weight: 300 !important;
+      letter-spacing: 1.1px !important; 
+      margin: 5px 10px 5px 0!important;
+      padding: 15px!important;
       border: none;
     }
 
-    input:focus {
+    .plan-trip-input:focus {
       outline: none;
-      -webkit-box-shadow: none !important;
-      box-shadow: none !important;
     }
     
-    input::placeholder {
+    .plan-trip-input::placeholder {
       color: white !important;
       font-size: .82rem;
     }
 
-    input[type="date" i] {
-      font-family: 'Saira', serif;
-      color:white;
-      font-size: .82rem;
-      text-transform: uppercase;
-      text-align: start;
+    .plan-trip-input[type="date" i] {
+      font-family: 'Saira', serif !important;
+      /* color:white; */
+      font-size: .82rem !important;
+      text-transform: uppercase !important;
+      text-align: start !important;
     }
 
     @media (max-width: 768px) {
-      input {
+      .plan-trip-input {
         margin: 5px;
       }
     }

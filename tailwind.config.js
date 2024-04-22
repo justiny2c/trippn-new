@@ -7,8 +7,8 @@ module.exports = {
   theme: {
     extend: {},
   },
-  corePlugins: {
-    preflight: false, // Disables Tailwind's base styles
-  },
-  plugins: [require('@tailwindcss/forms')],
+  plugins: [
+    
+  ]
+  // plugins: [require('@tailwindcss/forms')],
 }
