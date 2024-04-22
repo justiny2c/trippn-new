@@ -29,11 +29,10 @@
     position: absolute;
     top: 10%;
     left: 2%; 
-    width: auto;
   }
 
     .hero-mission {
-      padding: 5px;
+      padding: 20px 10px;
       margin: 0;
     }
     

@@ -19,11 +19,9 @@ const ValueCard = ({ icon, title, description }) => (
 );
 
 const HomePage = () => {
-
-  const history = useNavigate(); // Get the history object to programmatically navigate
-
+  const history = useNavigate(); 
   const navigateToPlanTrip = () => {
-    history('/plan-trip'); // Use history.push to navigate to the PlanTripPage route
+    history('/plan-trip'); 
   };
 
   return (
