@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import supabase from '../api/supabaseClient';
 import axios from 'axios';
 import './PlanTripPage.css';
 
 const PlanTripPage = () => {
+  const navigate = useNavigate();
 
   const [userId, setUserId] = useState(null);
   const [tripDetails, setTripDetails] = useState({
@@ -53,6 +55,7 @@ const PlanTripPage = () => {
         }
       );
       console.log(response.data); // Accessing data directly from the response object
+      navigate('/itinerary');
     } catch (error) {
       console.error('There was a problem with the axios operation:', error.response ? error.response.data : error.message);
     }
