@@ -13,7 +13,7 @@ export default function Day({day}) {
                 <p className='text-sm mt-1'>
                     {day.format('ddd').toUpperCase()}
                 </p>
-                <p className={`text-sm p1 my-1 text-center ${getCurrentDayClass()}`}>
+                <p className={`text-sm py-1 my-1 text-center ${getCurrentDayClass()}`}>
                     {day.format('DD')}
                 </p>  
             </header>
