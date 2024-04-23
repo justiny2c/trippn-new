@@ -12,7 +12,7 @@ const SmallSideCalendar = () => {
         setCurrentMonth(getMonth(currentMonthIdx))
     }, [currentMonthIdx])
 
-    const { monthIndex } = useContext(CalendarContext)
+    const { monthIndex , setSmallSideCalendarMonth, daySelected, setDaySelected } = useContext(CalendarContext)
     useEffect(() => {
         setCurrentMonthIdx(monthIndex)
     }, [monthIndex])
@@ -28,10 +28,13 @@ const SmallSideCalendar = () => {
         const format = "DD-MM-YY"
         const nowDay = dayjs().format(format)
         const currDay = day.format(format)
+        const slcDay = daySelected && daySelected.format(format)
         if(nowDay === currDay){
             return "bg-blue-500 rounded-full text-white"
+        } else if (currDay === slcDay){
+            return "bg-blue-100 rounded-full text-blue-600 font-semibold"
         } else {
-            return ""
+           return "" 
         }
     }
 
@@ -63,7 +66,14 @@ const SmallSideCalendar = () => {
                 {currentMonth.map((row, i) => (
                     <React.Fragment key={i}>
                         {row.map((day, idx) => (
-                            <button key={idx} className={`py-1 w-full ${getDayClass(day)}`}>
+                            <button 
+                                key={idx}
+                                onClick={() => {
+                                    setSmallSideCalendarMonth(currentMonthIdx)
+                                    setDaySelected(day)
+                                }} 
+                                className={`py-1 w-full ${getDayClass(day)}`}
+                            >
                                 <span className='text-sm'>
                                     {day.format("D")}
                                 </span>
