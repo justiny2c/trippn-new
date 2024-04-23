@@ -135,7 +135,10 @@
     }
     
     .build-itinerary-button {
-      background-color: #5194f1; 
+      background-color: #5194f1;
+      display: flex; 
+      align-items: center;
+      justify-content: center;
       border: none;
       border-radius: 3px;
       padding: 10px 25px;
