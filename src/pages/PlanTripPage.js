@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import supabase from '../api/supabaseClient';
 import axios from 'axios';
+import { Spinner } from "@material-tailwind/react";
 import './PlanTripPage.css';
 
 const PlanTripPage = () => {
@@ -43,7 +44,10 @@ const PlanTripPage = () => {
         }));
     };
 
+  
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const handleSubmit = async (e) => {
+    setIsSubmitting(true);
     try {
       const response = await axios.post(
         'https://trippn-ai-fd36c0a9cdb0.herokuapp.com/api/chat',
@@ -108,7 +112,13 @@ const PlanTripPage = () => {
                 value={tripDetails.travelers}
                 onChange=handleInputChange}
               /> */}
-              <button type="button" className="build-itinerary-button" onClick={handleSubmit}>Build Itinerary</button> 
+              <button type="button" className="build-itinerary-button" onClick={handleSubmit} disabled={isSubmitting}>
+                {isSubmitting ? (
+                  <>
+                    <Spinner size="h-6 w-6" color="white" />
+                  </>
+                ) : 'Build Itinerary'}
+        </button>
             </form>
           </div>
         </div>
