@@ -6,6 +6,15 @@
     justify-content: center;
   }
 
+  .loading-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 70px;
+    height: 83vh;
+    width: 100%;
+  }
+
   .response-section {
     display: flex;
     flex-direction: column;
@@ -59,7 +68,7 @@
   }
 
     @media (max-width: 768px) {
-        .response-section {
+        .loading-container, .response-section {
         margin-top: 100px;
         flex-direction: column;
         }
