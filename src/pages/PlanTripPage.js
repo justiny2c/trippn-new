@@ -114,8 +114,8 @@ const PlanTripPage = () => {
               /> */}
               <button type="button" className="build-itinerary-button" onClick={handleSubmit} disabled={isSubmitting}>
                 {isSubmitting ? (
-                  <>
-                    <Spinner size="h-6 w-6" color="white" />
+                  <> Building...
+                    <Spinner size="h-4 w-4" color="white" />
                   </>
                 ) : 'Build Itinerary'}
         </button>
