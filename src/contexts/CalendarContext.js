@@ -17,7 +17,7 @@ export default CalendarContext
 export const CalendarProvider = (props) => {
   const [monthIndex, setMonthIndex ] = useState(dayjs().month())
   const [smallSideCalendarMonth, setSmallSideCalendarMonth] = useState(null)
-  const [daySelected, setDaySelected] = useState(null)
+  const [daySelected, setDaySelected] = useState(dayjs())
   const [ showEventModal, setShowEventModal] = useState(false)
 
   useEffect(() => {
