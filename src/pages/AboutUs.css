@@ -59,7 +59,6 @@
         padding: 30px;
         margin-top: -18px;
         border-radius: 20px 20px 0 0;
-        /* height: 550px; */
         height: 99%;
         width: auto;
     }
@@ -67,7 +66,7 @@
     .text-section {
         display: flex;
         background: rgba(255, 255, 255, .92);
-        border-radius: 5px;
+        border-radius: 10px;
         padding: 10px 20px;
         margin: 3%;
         height: 70%;
