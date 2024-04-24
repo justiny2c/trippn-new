@@ -4,11 +4,12 @@ import CalendarHeader from './calendarcomponents/CalendarHeader'
 import Sidebar from './calendarcomponents/Sidebar'
 import Month from './calendarcomponents/Month'
 import CalendarContext from "../contexts/CalendarContext"
+import EventModal from './calendarcomponents/EventModal'
 import "./GoogleCalendar.css"
 
 const GoogleCalendar = () => {
   const [currentMonth, setCurrentMonth] = useState(getMonth())
-  const { monthIndex } = useContext(CalendarContext)
+  const { monthIndex, showEventModal } = useContext(CalendarContext)
 
   useEffect(() => {
     setCurrentMonth(getMonth(monthIndex))
@@ -16,6 +17,7 @@ const GoogleCalendar = () => {
 
   return (
     <React.Fragment>
+      {showEventModal && <EventModal />}
       <div className='calendar-page'>
           <div className='h-screen flex flex-col'>
             <CalendarHeader />

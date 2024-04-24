@@ -8,6 +8,8 @@ const CalendarContext = React.createContext({
     setSmallSideCalendarMonth: ( index ) => {},
     daySelected: null,
     setDaySelected: ( day ) => {},
+    showEventModal: false,
+    setShowEventModal: () => {}
 })
 
 export default CalendarContext
@@ -16,6 +18,7 @@ export const CalendarProvider = (props) => {
   const [monthIndex, setMonthIndex ] = useState(dayjs().month())
   const [smallSideCalendarMonth, setSmallSideCalendarMonth] = useState(null)
   const [daySelected, setDaySelected] = useState(null)
+  const [ showEventModal, setShowEventModal] = useState(false)
 
   useEffect(() => {
     if(smallSideCalendarMonth !== null){
@@ -31,7 +34,9 @@ export const CalendarProvider = (props) => {
           smallSideCalendarMonth, 
           setSmallSideCalendarMonth, 
           daySelected, 
-          setDaySelected}}
+          setDaySelected,
+          showEventModal,
+          setShowEventModal}}
       >
           {props.children}
       </CalendarContext.Provider>
