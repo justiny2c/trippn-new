@@ -1,7 +1,10 @@
 /* AboutUs.css */
 .about-page {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    height: 96vh;
   }
 
     .about-container {
@@ -11,6 +14,7 @@
     justify-content: center;
     margin-top: 63px;
     border-radius: 20px 20px 0 0;
+    height: 99%;
     }
 
     @media (max-width: 768px) {
@@ -55,7 +59,8 @@
         padding: 30px;
         margin-top: -18px;
         border-radius: 20px 20px 0 0;
-        height: 550px;
+        /* height: 550px; */
+        height: 99%;
         width: auto;
     }
 
