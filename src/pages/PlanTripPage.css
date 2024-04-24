@@ -4,6 +4,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  height: 96vh;
 }
 
   .plan-trip-container {  
@@ -17,7 +18,7 @@
       justify-content: center;
       background-blend-mode: overlay;
       background-size: cover;
-      height: 83vh;
+      height: 100%;
       width: 100%;
       border-radius: 20px 20px 0 0;
       margin-top: 63px;
