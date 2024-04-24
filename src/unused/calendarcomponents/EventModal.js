@@ -11,15 +11,27 @@ const labelsClasses = [
 ]
 
 export default function EventModal() {
-    const {setShowEventModal, daySelected} = useContext(CalendarContext)
+    const {setShowEventModal, daySelected, dispatchCalEvent} = useContext(CalendarContext)
+
     const [title, setTitle] = useState("")
     const [description, setDescription] = useState("")
     const [selectedLabel, setselectedLabel] = useState(labelsClasses[0])
 
-
+    function handleSubmit(e) {
+        e.preventDefault()
+        const calendarEvent = {
+            title, 
+            description,
+            label: selectedLabel,
+            day: daySelected.valueOf(),
+            id: Date.now()
+        }
+        dispatchCalEvent({type: "push", payload: calendarEvent})
+        setShowEventModal(false)
+    }
     return (
     <div className='h-screen w-full fixed left-0 top-0 flex justify-center items-center'>
-        <form className='bg-white rounded-lg shadow-2xl w-1/4'>
+        <form className='bg-white rounded-lg shadow-2xl w-1/2 flex flex-col'>
             <header className='bg-gray-100 px-4 py-2 w-full flex justify-between items-center'>
                 <span className='material-icons-outlined text-gray-400'>
                     drag_handle
@@ -30,7 +42,7 @@ export default function EventModal() {
                     </span>
                 </button>
             </header>
-            <div className='p-3 flex flex-cols justify-center items-center'>
+            <div className='p-3'>
                 <div className='grid grid-cols-1/5 items-end gap-y-7'>
                     <div></div>
                     <input 
@@ -78,6 +90,15 @@ export default function EventModal() {
                     </div>
                 </div>
             </div>
+            <footer className='flex justify-end border-t p-3 mt-5'>
+                <button 
+                    type="submit"
+                    onClick={handleSubmit} 
+                    className='bg-blue-500 hover:bg-blue-600 px-6 py-2 rounded text-white'
+                    >
+                    Save
+                </button>
+            </footer>
         </form>
     </div>
     )
