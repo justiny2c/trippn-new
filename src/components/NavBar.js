@@ -10,6 +10,8 @@ const NavBar = () => {
   const [isActive, setIsActive] = useState(false);
   const { user, signOut } = useAuth();
 
+  const classNameFunc = ({ isActive }) => (isActive ? "active-link" : "");
+
   return (
     <div>
         <nav className="navbar">
@@ -22,9 +24,9 @@ const NavBar = () => {
               <div className={`bar3 ${isActive ? 'change' : ''}`}></div>
             </div>
             <div className={`nav-links nav-one ${isActive ? 'active' : ''}`}>
-              <NavLink to="/plan-trip">Plan Trip</NavLink>
-              <NavLink to="/itinerary">Itineraries</NavLink>
-              <NavLink to="/about-us">About Us</NavLink>              
+              <NavLink to="/plan-trip" className={classNameFunc}>Plan Trip</NavLink>
+              <NavLink to="/itinerary" className={classNameFunc}>Itineraries</NavLink>
+              <NavLink to="/about-us" className={classNameFunc}>About Us</NavLink>              
             </div>
             <div className={`nav-links nav-two ${isActive ? 'active' : ''}`}>
               <NavLink to="/login">Login</NavLink>
