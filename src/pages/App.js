@@ -13,9 +13,11 @@ import ResponsePage from "./ResponsePage";
 import AboutUs from './AboutUs';
 import GoogleCalendar from '../unused/GoogleCalendar';
 import MyCalendar from "./Calendar";
-import LoadingScreen from './LoadingScreen';
+// import LoadingScreen from './LoadingScreen';
+import PrivacyTerms from './PrivacyTerms';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
 import './App.css';
+
 
 
 
@@ -33,10 +35,11 @@ function App() {
                 <Route path="plan-trip" element={ <PlanTripPage />} />
                 <Route path="itinerary" element={<ResponsePage />} />
                 <Route path="calendar" element={<MyCalendar />} />
-                <Route path="loading" element={<LoadingScreen />} />
+                {/* <Route path="loading" element={<LoadingScreen />} /> */}
               </Route>
               <Route path="about-us" element={<AboutUs />} />
-                <Route path="google" element={<GoogleCalendar />} />
+              <Route path="privacy-terms" element={<PrivacyTerms />} />
+              <Route path="google" element={<GoogleCalendar />} />
             </Routes>
           <Footer />   
         </CalendarProvider>              
