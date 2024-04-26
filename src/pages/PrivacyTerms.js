@@ -28,15 +28,19 @@ export default function PrivacyTerms() {
                 – To gather analysis or valuable information so that we can improve our Service
                 <br /><br />
                 4. Managing Google Account Access
+                <br /><br />
                 You can manage your Google account access by visiting the Google security settings page at Google Account.
                 <br /><br />    
                 5. Data Protection
+                <br /><br />
                 The security of your data is important to us but remember that no method of transmission over the Internet or method of electronic storage is 100% secure.
                 <br /><br />    
                 6. Links to Other Sites
+                <br /><br />
                 Our Service may contain links to other sites that are not operated by us. If you click on a third-party link, you will be directed to that third party's site.
                 <br /><br />    
                 7. Changes to This Privacy Policy
+                <br /><br />
                 We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page.
                 <br /><br />    
                 For more information on how Google uses data when you use our partners' sites or apps, see Google's Privacy & Terms.
