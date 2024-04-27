@@ -44,6 +44,20 @@ export default function PrivacyTerms() {
                 We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page.
                 <br /><br />    
                 For more information on how Google uses data when you use our partners' sites or apps, see Google's Privacy & Terms.
+                <br /><br /> 
+                8. Data Deletion
+                <br /><br /> 
+                At Trippn, we understand the importance of your privacy and give you the option to delete your personal data from our systems. If you wish to request the deletion of your personal data, please follow these steps:
+                <br /><br /> 
+                – Submit a Request: Contact us via our dedicated email address for privacy concerns (privacy@trippn.com) or use the contact form available on our website. Please include your full name and email address associated with your account to help us identify your records.
+                <br /><br /> 
+                – Verification: We will verify your identity to prevent unauthorized data deletion requests. This process may involve asking you to confirm details that only you would know or sending a verification link to your registered email address.
+                <br /><br /> 
+                – Confirmation and Deletion: Once your identity is verified, we will proceed with the deletion of your data from our systems. We will confirm the completion of data deletion via email within 30 days of your request.
+                <br /><br /> 
+                – Exceptions: Note that in some cases, we might be legally obligated to keep certain data for a set period (for example, for tax, legal reporting, or auditing purposes). In these cases, your data will not be deleted until these obligations are fulfilled.
+                <br /><br /> 
+                Please note that deleting your data will result in the termination of your account and access to our services. If you have any questions about our data deletion process, please contact us.
             </p>
         </div>
         <div className='terms-conditions'>
