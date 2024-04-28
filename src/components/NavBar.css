@@ -58,10 +58,10 @@
     font-family: "Saira", sans-serif;
     font-size: .9rem;
     font-weight: 450;
-    background-color: rgb(226, 226, 226);
-    padding: 5px 10px;
+    background-color: rgb(216, 216, 216);
+    padding: 5px 15px;
     cursor: pointer;
-    border-radius: 3px;
+    border-radius: 20px;
   }
 
   .sign-out-button:hover {

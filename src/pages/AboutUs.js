@@ -1,4 +1,5 @@
 import React from 'react';
+import Welcome from "../icons/welcome.png"
 import './AboutUs.css'; 
 
 const AboutUs = () => {
@@ -10,8 +11,9 @@ const AboutUs = () => {
             <p className='title-statement'>What are we solving?</p>
         </div>
         <div className='text-container'>
+        <img src={Welcome} alt="welcome" className='welcome'/> 
           <div className="text-section">
-            <div className='welcome'>
+            <div className='welcome-text'>
               <p>Welcome to </p>
               <h2>Trippn</h2>
               <p>!</p>

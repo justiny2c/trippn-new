@@ -63,6 +63,16 @@
         width: auto;
     }
 
+    .welcome {
+        position:absolute;
+        top: 32%;
+        left: 15%;
+        transform: rotate(-10deg);
+        opacity: 0.9;
+        height: 100px !important;
+        z-index: 1;
+    }
+
     .text-section {
         display: flex;
         flex-direction: column;
@@ -72,6 +82,7 @@
         margin: 3%;
         height: 60%;
         width: 55%;
+        z-index: 2;
     }
 
     .text-section h2 {
@@ -86,7 +97,7 @@
         scrollbar-width: thin;
     }
     
-    .welcome {
+    .welcome-text {
         display: flex;
         align-items: center;
     }
