@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import supabase from '../api/supabaseClient';
 import axios from 'axios';
 import { Spinner } from "@material-tailwind/react";
+import Stamp from "../icons/stamp.png";
+import Pinpoint from "../icons/pinpoint.png";
 import './PlanTripPage.css';
 
 const PlanTripPage = () => {
@@ -67,7 +69,8 @@ const PlanTripPage = () => {
 
   return (
       <div className="plan-trip-page">
-        <div className='plan-trip-container'>          
+        <div className='plan-trip-container'>
+          <img src={Stamp} alt="stamp" className='stamp'/>          
           <div className='form-title-container'>
             <p className='form-title'>Ready to plan your</p>
             <p className='form-emphasis'>trip?</p>
@@ -114,13 +117,14 @@ const PlanTripPage = () => {
               /> */}
               <button type="button" className="build-itinerary-button" onClick={handleSubmit} disabled={isSubmitting}>
                 {isSubmitting ? (
-                  <> Building...
+                  <>
                     <Spinner size="h-4 w-4" color="white" />
                   </>
                 ) : 'Build Itinerary'}
-        </button>
+              </button>
             </form>
           </div>
+          <img src={Pinpoint} alt="pinpoint" className='pinpoint'/> 
         </div>
       </div>
   );

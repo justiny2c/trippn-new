@@ -25,6 +25,26 @@
       z-index: 0;
       position: relative;
     }
+
+    .stamp {
+      position:absolute;
+      top: 10%;
+      left:10%;
+      transform: rotate(15deg);
+      opacity: 0.85;
+      height: 80px !important;
+      z-index: 1;
+    }
+
+    .pinpoint {
+      position:absolute;
+      bottom: 10%;
+      right:15%;
+      transform: rotate(-10deg);
+      opacity: 0.85;
+      height: 95px !important;
+      z-index: 1;
+    }
     
     .form-container {
       background-color: rgba(255,255,255, 0.3);
@@ -37,6 +57,7 @@
       border-radius: 10px;
       margin: 10px;
       width: 75%;
+      z-index: 2;
     }
 
     .form-title-container {

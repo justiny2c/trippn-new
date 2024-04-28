@@ -72,13 +72,13 @@
         align-items: center;
         background-color: #5194f1;
         border: none;
-        padding: 5px 15px;
+        padding: 15px;
         color: white;
         cursor: pointer;
-        border-radius: 3px;
+        border-radius: 20px;
         margin: 10px 5px;
         width: 130px;
-        height: 40px;
+        height: 42px;
       }
 
       .action-button.two {
@@ -96,7 +96,7 @@
 
       .button-logo {
         height: 1.5rem;
-        padding: 8px;
+        padding: 5px;
         width: 100%;
       }
 
@@ -210,8 +210,8 @@
       }
 
       .value-card img {
-        width: 50px; /* Size of icons */
-        margin: 20px;
+        width: 50px;
+        margin: 20px 0 10px;
       }
 
       .value-card h3 {

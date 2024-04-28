@@ -2,7 +2,7 @@
 .footer {
     background-color: white;
     color: black;
-    padding: 15px 50px;
+    padding: 20px 50px;
     font-size: .82rem;
     font-weight: 400;
     z-index: 9999;
@@ -21,7 +21,7 @@
     }
   }
   
-  .social-media-links a {
+  /* .social-media-links a {
     color: black;
     text-decoration: none;
     margin-right: 15px;
@@ -29,10 +29,14 @@
   
   .social-media-links a:hover {
     text-decoration: underline; 
-  }
+  } */
+
   
   .contact-info p {
     margin: 0; 
     padding: 5px 0; 
   }
-  
+
+  .contact-info a:hover {
+    color: #5194f1;
+  }

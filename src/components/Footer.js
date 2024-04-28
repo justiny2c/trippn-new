@@ -1,4 +1,5 @@
 import React from 'react'
+import {NavLink} from 'react-router-dom';
 import './Footer.css';
 
 const Footer = () => {
@@ -14,6 +15,7 @@ const Footer = () => {
           <a href="https://instagram.com/yourhandle" target="_blank" rel="noopener noreferrer">Instagram</a>
         </div> */}
         <div className="contact-info">
+          <NavLink to="/privacy-terms" >Privacy & Terms</NavLink>
           {/* <p>Email: contact@example.com</p>
           <p>Phone: +123 456 7890</p> */}
         </div>

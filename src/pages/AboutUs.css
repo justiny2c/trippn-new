@@ -53,7 +53,7 @@
         display: flex;
         align-items: center;
         justify-content: end;
-        background-image: url('../images/emily-karakis-h42lxMVrA08-unsplash.jpg'), linear-gradient(rgba(0,0,0,0.08),rgba(0,0,0,0.08));
+        background-image: url('../images/jeremy-doddridge-efhEncQLi4w-unsplash.jpg'), linear-gradient(rgba(0,0,0,0.08),rgba(0,0,0,0.08));
         background-blend-mode: overlay;
         background-size: cover;
         padding: 30px;
@@ -63,22 +63,44 @@
         width: auto;
     }
 
+    .welcome {
+        position:absolute;
+        top: 32%;
+        left: 15%;
+        transform: rotate(-10deg);
+        opacity: 0.9;
+        height: 100px !important;
+        z-index: 1;
+    }
+
     .text-section {
         display: flex;
+        flex-direction: column;
         background: rgba(255, 255, 255, .92);
         border-radius: 10px;
-        padding: 10px 20px;
+        padding: 15px 20px;
         margin: 3%;
-        height: 70%;
-        width: 45%;
+        height: 60%;
+        width: 55%;
+        z-index: 2;
+    }
+
+    .text-section h2 {
+        margin: 0 1px 0 3.5px;
+        font-weight: 600;
     }
 
     .text-section p {
-        font-size: .9rem;
+        font-size: .92rem;
         overflow: auto;
         scrollbar-color: #b9bdaf transparent;
         scrollbar-width: thin;
-    }    
+    }
+    
+    .welcome-text {
+        display: flex;
+        align-items: center;
+    }
     
     @media (max-width: 768px) {
         .text-container {
