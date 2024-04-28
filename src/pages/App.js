@@ -10,7 +10,7 @@ import HomePage from './HomePage';
 import PlanTripPage from './PlanTripPage';
 import ResponsePage from "./ResponsePage";
 import AboutUs from './AboutUs';
-import GoogleCalendar from '../unused/GoogleCalendar';
+import GoogleCalendar from '../calendar/Calendar';
 // import LoadingScreen from './LoadingScreen';
 import PrivacyTerms from './PrivacyTerms';
 import './App.css';

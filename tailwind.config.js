@@ -1,9 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 const withMT = require("@material-tailwind/react/utils/withMT");
+const colors = require('tailwindcss/colors')
 
 module.exports = withMT({
   content: [
-    // "./src/index.js",
     "./src/**/*.{js,jsx,ts,tsx}", "./index.html" // Adjust this path if your source files reside elsewhere
   ],
   theme: {
@@ -18,6 +18,7 @@ module.exports = withMT({
       gridTemplateColumns: {
         "1/5": "1fr 5fr"
       },
+      colors
     }
   },
   plugins: []

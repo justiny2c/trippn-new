@@ -5,7 +5,7 @@ import Sidebar from './calendarcomponents/Sidebar'
 import Month from './calendarcomponents/Month'
 import CalendarContext from "../contexts/CalendarContext"
 import EventModal from './calendarcomponents/EventModal'
-import "./GoogleCalendar.css"
+import "./Calendar.css"
 
 const GoogleCalendar = () => {
   const [currentMonth, setCurrentMonth] = useState(getMonth())
