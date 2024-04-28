@@ -11,12 +11,18 @@ const AboutUs = () => {
         </div>
         <div className='text-container'>
           <div className="text-section">
-              <p>Welcome to Trippn, where we harness AI to craft travel experiences that resonate with your unique style. Travel is more than reaching a destination; it's about tailored adventures shaped by your interests and dreams. 
-                  <br/><br/> We understand the challenges of planning—too many choices, not enough customization. That's why we've built a platform that streamlines the process, offering bespoke itineraries for any traveler. Whether you crave serene shores, thrilling exploits, or cultural dives, Trippn makes your ideal trip a reality.
-                  <br/><br/> Embark with us on a redefined travel experience, crafted for both avid and new explorers alike. Trippn is here to ensure your journeys are as individual as you are.
-                  <br/><br/> Happy travels!
-                  <br/><br/>Justin Chen
-                  <br/>Founder & CEO, Trippn
+            <div className='welcome'>
+              <p>Welcome to </p>
+              <h2>Trippn</h2>
+              <p>!</p>
+            </div>
+              <p>
+                <br/>Here, we're all about making travel truly personal. We get it—planning a trip can feel overwhelming with endless options and not enough personalization. That's why we've put our hearts and minds into creating a platform that takes the stress out of travel planning and puts the focus back on what matters most: you.
+                <br/><br/> With Trippn, it's all about crafting unforgettable adventures tailored to your unique likes and dreams. Whether you're dreaming of relaxing on serene shores, seeking heart-pounding thrills, or immersing yourself in new cultures, we've got you covered.
+                <br/><br/> So, are you ready to embark on a journey like no other? Join us and let's redefine travel together. Trippn is here to ensure that every step of your journey is as individual and extraordinary as you are.
+                <br/><br/> Can't wait to see where your adventures take you!
+                <br/><br/>Justin Chen
+                <br/>Founder & CEO, Trippn AI
               </p>
           </div>
         </div>
