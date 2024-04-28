@@ -2,7 +2,6 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import ProtectedRoute from '../components/ProtectedRoute';
 import { AuthProvider } from '../contexts/AuthContext';
-// import { ItineraryProvider } from '../contexts/ItineraryContext';
 import { CalendarProvider } from '../contexts/CalendarContext';
 import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
@@ -12,10 +11,8 @@ import PlanTripPage from './PlanTripPage';
 import ResponsePage from "./ResponsePage";
 import AboutUs from './AboutUs';
 import GoogleCalendar from '../unused/GoogleCalendar';
-import MyCalendar from "./Calendar";
 // import LoadingScreen from './LoadingScreen';
 import PrivacyTerms from './PrivacyTerms';
-import 'react-big-calendar/lib/css/react-big-calendar.css';
 import './App.css';
 
 
@@ -25,7 +22,6 @@ function App() {
   return ( 
     <div>
       <AuthProvider>   
-        {/* <ItineraryProvider>               */}
         <CalendarProvider>
           <NavBar />
             <Routes>
@@ -34,7 +30,6 @@ function App() {
               <Route path="/" element={<ProtectedRoute />}>
                 <Route path="plan-trip" element={ <PlanTripPage />} />
                 <Route path="itinerary" element={<ResponsePage />} />
-                <Route path="calendar" element={<MyCalendar />} />
                 {/* <Route path="loading" element={<LoadingScreen />} /> */}
               </Route>
               <Route path="about-us" element={<AboutUs />} />
@@ -42,8 +37,7 @@ function App() {
               <Route path="google" element={<GoogleCalendar />} />
             </Routes>
           <Footer />   
-        </CalendarProvider>              
-        {/* </ItineraryProvider> */}
+        </CalendarProvider>             
       </AuthProvider>  
     </div>  
   )
