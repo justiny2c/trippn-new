@@ -16,8 +16,9 @@ const Footer = () => {
         </div> */}
         <div className="contact-info">
           <NavLink to="/privacy-terms" >Privacy & Terms</NavLink>
-          {/* <p>Email: contact@example.com</p>
-          <p>Phone: +123 456 7890</p> */}
+          <a href="mailto:contact@trippn.ai?subject=Contact%20Trippn&body=I%20would%20like%20to%20contact%20Trippn%20AI">
+            Contact Us
+          </a>
         </div>
       </div>
     </footer>
