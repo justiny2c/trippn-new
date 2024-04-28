@@ -1,15 +1,28 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import dayjs from "dayjs"
 import CalendarContext from '../../contexts/CalendarContext';
 
 export default function Day({day}) {
+
+    const [dayEvents, setDayEvents] = useState([])
+    const {
+        setDaySelected, 
+        setShowEventModal, 
+        filteredEvents, 
+        setSelectedEvent 
+    } = useContext(CalendarContext)
+    
+    useEffect(() => {
+        const events = filteredEvents.filter(evt => dayjs(evt.day).format("DD-MM-YY") === day.format("DD-MM-YY") 
+        );
+        setDayEvents(events)
+    }, [filteredEvents, day])
+
     function getCurrentDayClass(){
         return day.format("DD-MM-YY") === dayjs().format("DD-MM-YY") 
         ? 'bg-blue-600 text-white rounded-full w-7'
         : "";
-    }
-
-    const {setDaySelected, setShowEventModal} = useContext(CalendarContext)
+        }
 
     return (
         <div className='border border-gray-200 flex flex-col'>
@@ -25,7 +38,14 @@ export default function Day({day}) {
                 setDaySelected(day)
                 setShowEventModal(true)
             }}>
-                {""}
+                {dayEvents.map((evt, idx) => (
+                    <div 
+                        key={idx}
+                        onClick={() => setSelectedEvent(evt)}
+                        className={`bg-${evt.label}-200 p-1 mr-3 text-gray-600 text-sm rounded mb-1 truncate`}>
+                        {evt.title}
+                    </div>
+                ))}
             </div>
         </div>
     )
