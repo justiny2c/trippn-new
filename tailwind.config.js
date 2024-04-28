@@ -7,17 +7,19 @@ module.exports = withMT({
     "./src/**/*.{js,jsx,ts,tsx}", "./index.html" // Adjust this path if your source files reside elsewhere
   ],
   theme: {
+    screens: {
+      'md': '768px',
+      // => @media (min-width: 768px) { ... }
+    },
     extend: {
       fontFamily: {
         sans: ["Saira"]
       },
       gridTemplateColumns: {
         "1/5": "1fr 5fr"
-      }
-    },
+      },
+    }
   },
-  plugins: [
-
-  ]
+  plugins: []
   // plugins: [require('@tailwindcss/forms')],
 })
