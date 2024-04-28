@@ -108,7 +108,7 @@ button {
     font-weight: 450;
     color: white;
     background-color: #5194f1 !important;
-    border: none !important;
+    border: none;
 }
 
 .c-bOcPnF-cmFMMs-color-primary:hover:not(:disabled) {
