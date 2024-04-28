@@ -112,7 +112,7 @@ button {
 }
 
 .c-bOcPnF-cmFMMs-color-primary:hover:not(:disabled) {
-    background-color: #18a02e;
+    background-color: #18a02e !important;
 }
 
 .login-auth div form {
