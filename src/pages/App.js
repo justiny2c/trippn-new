@@ -11,6 +11,7 @@ import PlanTripPage from './PlanTripPage';
 import ResponsePage from "./ResponsePage";
 import AboutUs from './AboutUs';
 import GoogleCalendar from '../calendar/Calendar';
+import Calendar from './Calendar';
 // import LoadingScreen from './LoadingScreen';
 import PrivacyTerms from './PrivacyTerms';
 import './App.css';
@@ -35,6 +36,7 @@ function App() {
               <Route path="about-us" element={<AboutUs />} />
               <Route path="privacy-terms" element={<PrivacyTerms />} />
               <Route path="google" element={<GoogleCalendar />} />
+              <Route path="google" element={<Calendar />} />
             </Routes>
           <Footer />   
         </CalendarProvider>             
