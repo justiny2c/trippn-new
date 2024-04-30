@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react'
 import dayjs from "dayjs"
-import CalendarContext from '../../contexts/CalendarContext';
+import CalendarContext from '../../contexts/GoogleCalendarContext';
 
 export default function Day({day}) {
 

@@ -2,7 +2,7 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import ProtectedRoute from '../components/ProtectedRoute';
 import { AuthProvider } from '../contexts/AuthContext';
-import { CalendarProvider } from '../contexts/CalendarContext';
+import { CalendarProvider } from '../contexts/GoogleCalendarContext';
 import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
 import Login from "../components/Login";
@@ -10,7 +10,7 @@ import HomePage from './HomePage';
 import PlanTripPage from './PlanTripPage';
 import ResponsePage from "./ResponsePage";
 import AboutUs from './AboutUs';
-import GoogleCalendar from '../calendar/Calendar';
+import GoogleCalendar from '../unused/GoogleCalendar';
 import Calendar from './Calendar';
 // import LoadingScreen from './LoadingScreen';
 import PrivacyTerms from './PrivacyTerms';
@@ -36,7 +36,7 @@ function App() {
               <Route path="about-us" element={<AboutUs />} />
               <Route path="privacy-terms" element={<PrivacyTerms />} />
               <Route path="google" element={<GoogleCalendar />} />
-              <Route path="google" element={<Calendar />} />
+              <Route path="calendar" element={<Calendar />} />
             </Routes>
           <Footer />   
         </CalendarProvider>             

@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useContext } from 'react'
 import dayjs from 'dayjs'
 import { getMonth } from "../util"
-import CalendarContext from "../../contexts/CalendarContext"
+import CalendarContext from "../../contexts/GoogleCalendarContext"
 
 
 const SmallSideCalendar = () => {
