@@ -1,5 +1,5 @@
 import React, {useContext} from 'react'
-import CalendarContext from '../../contexts/CalendarContext'
+import CalendarContext from '../../contexts/GoogleCalendarContext'
 
 const CreateEventButton = () => {
     const { setShowEventModal } = useContext(CalendarContext)

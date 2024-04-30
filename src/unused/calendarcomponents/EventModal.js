@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react'
-import CalendarContext from '../../contexts/CalendarContext'
+import CalendarContext from '../../contexts/GoogleCalendarContext'
 
 const labelsClasses = [
     "indigo", 

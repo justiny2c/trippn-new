@@ -3,9 +3,9 @@ import { getMonth } from './util'
 import CalendarHeader from './calendarcomponents/CalendarHeader'
 import Sidebar from './calendarcomponents/Sidebar'
 import Month from './calendarcomponents/Month'
-import CalendarContext from "../contexts/CalendarContext"
+import CalendarContext from "../contexts/GoogleCalendarContext"
 import EventModal from './calendarcomponents/EventModal'
-import "./Calendar.css"
+import "./GoogleCalendar.css"
 
 const GoogleCalendar = () => {
   const [currentMonth, setCurrentMonth] = useState(getMonth())
