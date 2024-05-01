@@ -15,11 +15,84 @@
     margin-top: 63px;
     border-radius: 20px 20px 0 0;
     padding: 10px;
+    width: 100%;
     height: 99%;
+    font-size: .9rem;
 }
 
 @media (max-width: 768px) {
     .calendar-container {
         margin-top: 100px;
     }
+}
+
+.fc-direction-ltr {
+    width: 95%;
+}
+
+.fc-toolbar-chunk {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.fc-icon {
+    /* color: black; */
+}
+
+.fc .fc-toolbar-title {
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-wrap: nowrap;
+}
+
+.fc .fc-button-primary {
+    background-color: #4e8cf5;
+    border-color: rgb(255, 255, 255);
+}
+
+.fc .fc-button-primary:hover {
+    background-color: #803680;
+    border-color: #803680;
+}
+
+.fc .fc-button-active-bg-color {
+    background-color: #803680;
+}
+
+.fc .fc-button-primary:not(:disabled).fc-button-active {
+    background-color: #803680;
+    border: 1px solid white;
+    box-shadow: none;
+    /* border-color: rgb(226, 226, 226); */
+}
+
+.fc .fc-button-primary:not(:disabled):active {
+    background-color: #803680;
+    border: none;
+    box-shadow: none;
+}
+
+
+.fc .fc-button {
+    box-shadow: none !important;
+}
+
+/* Ensures no box-shadow on hover */
+.fc .fc-button:hover {
+    box-shadow: none !important;
+}
+
+/* Ensures no box-shadow on focus */
+.fc .fc-button:focus {
+    box-shadow: none !important;
+    outline: none !important;  /* Often you might also want to remove the outline */
+}
+
+/* Ensures no box-shadow on active */
+.fc .fc-button:active {
+    box-shadow: none !important;
+}
+
+.fc .fc-col-header-cell-cushion {
+    font-weight: 500;
 }
