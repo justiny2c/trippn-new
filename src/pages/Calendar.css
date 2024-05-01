@@ -26,18 +26,28 @@
     }
 }
 
-.fc-direction-ltr {
-    width: 95%;
+.fc {
+    width: 100%;
+}
+
+.fc-header-toolbar {
+    background-color: #fff; 
+    padding: 10px;
+    border-radius: 5px;
 }
 
 .fc-toolbar-chunk {
     display: flex;
     flex-flow: row nowrap;
+    margin: 0 5px;
 }
 
-.fc-icon {
-    /* color: black; */
+.fc-toolbar > .fc-toolbar-chunk:nth-child(2) {
+    background-color:#e3e3e1;
+    padding: 5px;
+    border-radius: 8px;
 }
+
 
 .fc .fc-toolbar-title {
     font-size: 1.1rem;
@@ -46,32 +56,68 @@
 }
 
 .fc .fc-button-primary {
-    background-color: #4e8cf5;
-    border-color: rgb(255, 255, 255);
+    background-color: #e3e3e1;
+    color: black;
+    border: none;
+    padding: 5px 18px;
+    margin: 0 8px;
 }
 
-.fc .fc-button-primary:hover {
-    background-color: #803680;
-    border-color: #803680;
+.fc .fc-button-primary:not(:disabled):hover {
+    background-color: white; 
+    border: none;
+    color: black;
+    border-radius: 8px;
 }
 
-.fc .fc-button-active-bg-color {
-    background-color: #803680;
+.fc .fc-button-primary:focus {
+    box-shadow: none;
+    outline: none;
 }
+
+/* .fc .fc-button-active-bg-color {
+    background-color: #803680;
+} */
 
 .fc .fc-button-primary:not(:disabled).fc-button-active {
-    background-color: #803680;
-    border: 1px solid white;
+    background-color: white;
+    color: black;
+    font-weight: 500;
     box-shadow: none;
-    /* border-color: rgb(226, 226, 226); */
+    border-radius: 8px;
 }
 
+
+/* On click */
 .fc .fc-button-primary:not(:disabled):active {
-    background-color: #803680;
+    background-color: white;
     border: none;
     box-shadow: none;
 }
 
+
+.fc-toolbar > .fc-toolbar-chunk:nth-child(3) button {
+    padding: 7px 15px;
+    border-radius: 8px;
+}
+
+/* Overide */
+.fc-direction-ltr .fc-button-group > .fc-button:not(:last-child) , .fc-direction-ltr .fc-button-group > .fc-button:not(:first-child) {
+    border-radius: 8px;
+}
+
+/* Specifically target the 'Today' button when it is active */
+.fc .fc-button-primary:disabled {
+    background-color: #4e8cf5; 
+    border-radius: 8px;
+    color: white;
+    font-weight: 400;
+    box-shadow: none !important;
+}
+
+.fc .fc-button:disabled {
+    opacity: .9;
+}
 
 .fc .fc-button {
     box-shadow: none !important;
@@ -93,6 +139,21 @@
     box-shadow: none !important;
 }
 
+
+.fc-col-header  {
+    margin-bottom: 20px;
+}
+
+/* tbody {
+    margin-top: 20px;
+} */
+
 .fc .fc-col-header-cell-cushion {
     font-weight: 500;
+    padding: 20px;
+}
+
+.fc .fc-view-harness {
+    /* background-color: #e3e3e1; */
+    background-color: white;
 }

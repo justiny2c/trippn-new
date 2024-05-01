@@ -84,9 +84,9 @@ const Calendar = () => {
                     plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
                     initialView="timeGridWeek"
                     headerToolbar={{
-                        left: 'prev,next today',
-                        center: 'title',
-                        right: 'dayGridMonth,timeGridWeek,timeGridDay'
+                        left: 'title',
+                        center: 'dayGridMonth,timeGridWeek,timeGridDay',
+                        right: 'prev,today,next'
                     }}
                     editable={true}
                     selectable={true}
