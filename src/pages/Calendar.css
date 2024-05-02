@@ -4,7 +4,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: start;
-    height: 96vh;
 }
 
 .calendar-container {
@@ -14,20 +13,22 @@
     justify-content: start;
     margin-top: 63px;
     border-radius: 20px 20px 0 0;
-    padding: 10px;
+    padding: 20px;
+    height: 95vh;
     width: 100%;
-    height: 99%;
     font-size: .9rem;
 }
 
 @media (max-width: 768px) {
     .calendar-container {
         margin-top: 100px;
+        /* height: 120vh; */
     }
 }
 
 .fc {
     width: 100%;
+    height: 100%;
 }
 
 .fc-header-toolbar {
@@ -43,20 +44,20 @@
 }
 
 .fc-toolbar > .fc-toolbar-chunk:nth-child(2) {
-    background-color:#e3e3e1;
+    background-color: #ebebe9;
     padding: 5px;
     border-radius: 8px;
 }
 
 
 .fc .fc-toolbar-title {
-    font-size: 1.1rem;
+    font-size: 1.25rem;
     font-weight: 500;
     text-wrap: nowrap;
 }
 
 .fc .fc-button-primary {
-    background-color: #e3e3e1;
+    background-color: #ebebe9;
     color: black;
     border: none;
     padding: 5px 18px;
@@ -87,14 +88,12 @@
     border-radius: 8px;
 }
 
-
 /* On click */
 .fc .fc-button-primary:not(:disabled):active {
     background-color: white;
     border: none;
     box-shadow: none;
 }
-
 
 .fc-toolbar > .fc-toolbar-chunk:nth-child(3) button {
     padding: 7px 15px;
@@ -140,20 +139,93 @@
 }
 
 
+/* Header */
 .fc-col-header  {
-    margin-bottom: 20px;
+    margin: 20px 0 40px;
 }
 
-/* tbody {
-    margin-top: 20px;
-} */
+.fc-theme-standard th {
+    border: none
+}
+
+.fc-scrollgrid-sync-inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.fc-scroller {
+    overflow: hidden;
+    scrollbar-width: thin;
+}
 
 .fc .fc-col-header-cell-cushion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
     font-weight: 500;
-    padding: 20px;
+    background-color: #ebebe9;
+    border-radius: 8px;
+    padding: 0;
+    margin: 0 5px;
+    font-size: 1rem;
+    height: 100px;
+    width: 90%;
+    min-width: 75px;
+    max-width: 250px
 }
 
-.fc .fc-view-harness {
-    /* background-color: #e3e3e1; */
-    background-color: white;
+.header-day-name {
+    font-size: .85rem;  /* Regular font size for the day name */
+    color: black;      /* Subtle text color */
 }
+
+.header-day-number {
+    font-size: 2rem;  /* Larger font size for the day number */
+    color: black;      /* More prominent color */
+    font-weight: 600; /* Bold for emphasis */
+}
+
+.header-today {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #000000; 
+    border-radius: 8px;
+    height: 100%;
+    width: 100%;
+    color: #fff;
+}
+
+.header-today .header-day-name,
+.header-today .header-day-number {
+    color: #fff;
+}
+
+
+
+.fc-theme-standard .fc-scrollgrid {
+    border: none;
+}
+
+.fc-direction-ltr .fc-timegrid-slot-label-frame {
+    text-align: center;
+}
+
+
+/* .fc .fc-timegrid-slot-minor {
+    border-top-style: none;
+} */
+
+
+.fc-theme-standard td {
+    border-right: none;
+}
+
+
+/* bg color of today  */
+:root {
+    --fc-today-bg-color: rgba(78,140,245,.1); /* Change to any color you like */
+} 

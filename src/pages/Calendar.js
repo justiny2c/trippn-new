@@ -16,6 +16,26 @@ const Calendar = () => {
     const [selectedEvent, setSelectedEvent] = useState(null);
     const [isModalOpen, setIsModalOpen] = useState(false);
 
+    const dayHeaderContent = (args) => {
+        // Get today's date for comparison
+        const today = new Date();
+        today.setHours(0, 0, 0, 0); // Normalize today's date (remove time)
+
+        // Check if the header's date is today
+        const isToday = args.date.toISOString() === today.toISOString();
+
+        // Example: args.date is a Date object, args.view and args.text are available
+        const dayNames = new Intl.DateTimeFormat('en-US', { weekday: 'long' }).format(args.date);
+        const dayNumber = new Intl.DateTimeFormat('en-US', { day: '2-digit' }).format(args.date);
+
+        return (
+            <div className={`header-container ${isToday ? 'header-today' : ''}`}>
+                <div className="header-day-name">{dayNames}</div>
+                <div className="header-day-number">{dayNumber}</div>
+            </div>
+        );
+    };
+
     const handleEventClick = ({ event }) => {
         console.log("Event clicked:", event.title);
         setSelectedEvent(event);
@@ -88,10 +108,12 @@ const Calendar = () => {
                         center: 'dayGridMonth,timeGridWeek,timeGridDay',
                         right: 'prev,today,next'
                     }}
+                    timeZone='UTC'
                     editable={true}
                     selectable={true}
                     selectMirror={true}
                     dayMaxEvents={true}
+                    dayHeaderContent={dayHeaderContent}
                     events={events}
                     eventClick={handleEventClick}
                 />
