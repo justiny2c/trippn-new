@@ -122,13 +122,9 @@ const Calendar = () => {
                     isOpen={isModalOpen}
                     onClose={() => setIsModalOpen(false)}
                     title={selectedEvent?.title}
-                    content={
-                        <div>
-                            <p>{selectedEvent?.extendedProps.details}</p>
-                            <p>Start: {selectedEvent?.start.toISOString()}</p>
-                            <p>End: {selectedEvent?.end.toISOString()}</p>
-                        </div>
-                    }
+                    details={selectedEvent?.extendedProps.details}
+                    start={selectedEvent?.start.toISOString()}
+                    end={selectedEvent?.end.toISOString()}
                 />
             )}
             </div>

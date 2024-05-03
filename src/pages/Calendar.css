@@ -229,3 +229,41 @@
 :root {
     --fc-today-bg-color: rgba(78,140,245,.1); /* Change to any color you like */
 } 
+
+/* Events */
+.fc-timegrid-event {
+    margin: 0;
+}
+
+.fc-timegrid-event .fc-event-main {
+    padding: 1.5px;
+}
+
+/* Event bg color */
+.fc-v-event {
+    background-color: rgba(78,140,245, .4);
+    border: none;
+    padding: 1px 0 1px 2px;
+}
+
+/* Event font */
+.fc-v-event .fc-event-main {
+    color: black;
+    height: 100%;
+}
+
+.fc-timegrid-event .fc-event-time {
+    font-size: .72rem;
+    color: rgb(65, 65, 65);
+    margin: 0;
+}
+
+.fc-sticky {
+    padding-top: 3px
+}
+
+.fc-v-event .fc-event-title {
+    font-size: .8rem;
+    font-weight: 500;
+    letter-spacing: .8px;
+}

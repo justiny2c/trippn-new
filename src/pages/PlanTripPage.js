@@ -61,7 +61,7 @@ const PlanTripPage = () => {
         }
       );
       console.log(response.data); // Accessing data directly from the response object
-      navigate('/itinerary');
+      navigate('/calendar');
     } catch (error) {
       console.error('There was a problem with the axios operation:', error.response ? error.response.data : error.message);
     }
