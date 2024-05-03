@@ -16,6 +16,26 @@ const Calendar = () => {
     const [selectedEvent, setSelectedEvent] = useState(null);
     const [isModalOpen, setIsModalOpen] = useState(false);
 
+    const dayHeaderContent = (args) => {
+        // Get today's date for comparison
+        const today = new Date();
+        today.setHours(0, 0, 0, 0); // Normalize today's date (remove time)
+
+        // Check if the header's date is today
+        const isToday = args.date.toISOString() === today.toISOString();
+
+        // Example: args.date is a Date object, args.view and args.text are available
+        const dayNames = new Intl.DateTimeFormat('en-US', { weekday: 'long' }).format(args.date);
+        const dayNumber = new Intl.DateTimeFormat('en-US', { day: '2-digit' }).format(args.date);
+
+        return (
+            <div className={`header-container ${isToday ? 'header-today' : ''}`}>
+                <div className="header-day-name">{dayNames}</div>
+                <div className="header-day-number">{dayNumber}</div>
+            </div>
+        );
+    };
+
     const handleEventClick = ({ event }) => {
         console.log("Event clicked:", event.title);
         setSelectedEvent(event);
@@ -84,14 +104,16 @@ const Calendar = () => {
                     plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
                     initialView="timeGridWeek"
                     headerToolbar={{
-                        left: 'prev,next today',
-                        center: 'title',
-                        right: 'dayGridMonth,timeGridWeek,timeGridDay'
+                        left: 'title',
+                        center: 'dayGridMonth,timeGridWeek,timeGridDay',
+                        right: 'prev,today,next'
                     }}
+                    timeZone='UTC'
                     editable={true}
                     selectable={true}
                     selectMirror={true}
                     dayMaxEvents={true}
+                    dayHeaderContent={dayHeaderContent}
                     events={events}
                     eventClick={handleEventClick}
                 />
@@ -100,13 +122,9 @@ const Calendar = () => {
                     isOpen={isModalOpen}
                     onClose={() => setIsModalOpen(false)}
                     title={selectedEvent?.title}
-                    content={
-                        <div>
-                            <p>{selectedEvent?.extendedProps.details}</p>
-                            <p>Start: {selectedEvent?.start.toISOString()}</p>
-                            <p>End: {selectedEvent?.end.toISOString()}</p>
-                        </div>
-                    }
+                    details={selectedEvent?.extendedProps.details}
+                    start={selectedEvent?.start.toISOString()}
+                    end={selectedEvent?.end.toISOString()}
                 />
             )}
             </div>

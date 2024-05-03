@@ -8,11 +8,10 @@ import Footer from '../components/Footer';
 import Login from "../components/Login";
 import HomePage from './HomePage';
 import PlanTripPage from './PlanTripPage';
-import ResponsePage from "./ResponsePage";
+// import ResponsePage from "./ResponsePage";
 import AboutUs from './AboutUs';
-import GoogleCalendar from '../unused/GoogleCalendar';
+// import GoogleCalendar from '../unused/GoogleCalendar';
 import Calendar from './Calendar';
-// import LoadingScreen from './LoadingScreen';
 import PrivacyTerms from './PrivacyTerms';
 import './App.css';
 
@@ -30,13 +29,13 @@ function App() {
               <Route path="/login" element={<Login />} />
               <Route path="/" element={<ProtectedRoute />}>
                 <Route path="plan-trip" element={ <PlanTripPage />} />
-                <Route path="itinerary" element={<ResponsePage />} />
-                {/* <Route path="loading" element={<LoadingScreen />} /> */}
+                <Route path="calendar" element={<Calendar />} />
+                {/* <Route path="itinerary" element={<ResponsePage />} /> */}
               </Route>
               <Route path="about-us" element={<AboutUs />} />
               <Route path="privacy-terms" element={<PrivacyTerms />} />
-              <Route path="google" element={<GoogleCalendar />} />
-              <Route path="calendar" element={<Calendar />} />
+              {/* <Route path="google" element={<GoogleCalendar />} /> */}
+              {/* <Route path="calendar" element={<Calendar />} /> */}
             </Routes>
           <Footer />   
         </CalendarProvider>             

@@ -4,7 +4,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: start;
-    height: 96vh;
 }
 
 .calendar-container {
@@ -14,12 +13,257 @@
     justify-content: start;
     margin-top: 63px;
     border-radius: 20px 20px 0 0;
-    padding: 10px;
-    height: 99%;
+    padding: 20px;
+    height: 95vh;
+    width: 100%;
+    font-size: .9rem;
 }
 
 @media (max-width: 768px) {
     .calendar-container {
         margin-top: 100px;
+        /* height: 120vh; */
     }
+}
+
+.fc {
+    width: 100%;
+    height: 100%;
+}
+
+.fc-header-toolbar {
+    background-color: #fff; 
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.fc-toolbar-chunk {
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 0 5px;
+}
+
+.fc-toolbar > .fc-toolbar-chunk:nth-child(2) {
+    background-color: #ebebe9;
+    padding: 5px;
+    border-radius: 8px;
+}
+
+
+.fc .fc-toolbar-title {
+    font-size: 1.25rem;
+    font-weight: 500;
+    text-wrap: nowrap;
+}
+
+.fc .fc-button-primary {
+    background-color: #ebebe9;
+    color: black;
+    border: none;
+    padding: 5px 18px;
+    margin: 0 8px;
+}
+
+.fc .fc-button-primary:not(:disabled):hover {
+    background-color: white; 
+    border: none;
+    color: black;
+    border-radius: 8px;
+}
+
+.fc .fc-button-primary:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+/* .fc .fc-button-active-bg-color {
+    background-color: #803680;
+} */
+
+.fc .fc-button-primary:not(:disabled).fc-button-active {
+    background-color: white;
+    color: black;
+    font-weight: 500;
+    box-shadow: none;
+    border-radius: 8px;
+}
+
+/* On click */
+.fc .fc-button-primary:not(:disabled):active {
+    background-color: white;
+    border: none;
+    box-shadow: none;
+}
+
+.fc-toolbar > .fc-toolbar-chunk:nth-child(3) button {
+    padding: 7px 15px;
+    border-radius: 8px;
+}
+
+/* Overide */
+.fc-direction-ltr .fc-button-group > .fc-button:not(:last-child) , .fc-direction-ltr .fc-button-group > .fc-button:not(:first-child) {
+    border-radius: 8px;
+}
+
+/* Specifically target the 'Today' button when it is active */
+.fc .fc-button-primary:disabled {
+    background-color: #4e8cf5; 
+    border-radius: 8px;
+    color: white;
+    font-weight: 400;
+    box-shadow: none !important;
+}
+
+.fc .fc-button:disabled {
+    opacity: .9;
+}
+
+.fc .fc-button {
+    box-shadow: none !important;
+}
+
+/* Ensures no box-shadow on hover */
+.fc .fc-button:hover {
+    box-shadow: none !important;
+}
+
+/* Ensures no box-shadow on focus */
+.fc .fc-button:focus {
+    box-shadow: none !important;
+    outline: none !important;  /* Often you might also want to remove the outline */
+}
+
+/* Ensures no box-shadow on active */
+.fc .fc-button:active {
+    box-shadow: none !important;
+}
+
+
+/* Header */
+.fc-col-header  {
+    margin: 20px 0 40px;
+}
+
+.fc-theme-standard th {
+    border: none
+}
+
+.fc-scrollgrid-sync-inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.fc-scroller {
+    overflow: hidden;
+    scrollbar-width: thin;
+}
+
+.fc .fc-col-header-cell-cushion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    font-weight: 500;
+    background-color: #ebebe9;
+    border-radius: 8px;
+    padding: 0;
+    margin: 0 5px;
+    font-size: 1rem;
+    height: 100px;
+    width: 90%;
+    min-width: 75px;
+    max-width: 250px
+}
+
+.header-day-name {
+    font-size: .85rem;  /* Regular font size for the day name */
+    color: black;      /* Subtle text color */
+}
+
+.header-day-number {
+    font-size: 2rem;  /* Larger font size for the day number */
+    color: black;      /* More prominent color */
+    font-weight: 600; /* Bold for emphasis */
+}
+
+.header-today {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #000000; 
+    border-radius: 8px;
+    height: 100%;
+    width: 100%;
+    color: #fff;
+}
+
+.header-today .header-day-name,
+.header-today .header-day-number {
+    color: #fff;
+}
+
+
+
+.fc-theme-standard .fc-scrollgrid {
+    border: none;
+}
+
+.fc-direction-ltr .fc-timegrid-slot-label-frame {
+    text-align: center;
+}
+
+
+/* .fc .fc-timegrid-slot-minor {
+    border-top-style: none;
+} */
+
+
+.fc-theme-standard td {
+    border-right: none;
+}
+
+
+/* bg color of today  */
+:root {
+    --fc-today-bg-color: rgba(78,140,245,.1); /* Change to any color you like */
+} 
+
+/* Events */
+.fc-timegrid-event {
+    margin: 0;
+}
+
+.fc-timegrid-event .fc-event-main {
+    padding: 1.5px;
+}
+
+/* Event bg color */
+.fc-v-event {
+    background-color: rgba(78,140,245, .4);
+    border: none;
+    padding: 1px 0 1px 2px;
+}
+
+/* Event font */
+.fc-v-event .fc-event-main {
+    color: black;
+    height: 100%;
+}
+
+.fc-timegrid-event .fc-event-time {
+    font-size: .72rem;
+    color: rgb(65, 65, 65);
+    margin: 0;
+}
+
+.fc-sticky {
+    padding-top: 3px
+}
+
+.fc-v-event .fc-event-title {
+    font-size: .8rem;
+    font-weight: 500;
+    letter-spacing: .8px;
 }
