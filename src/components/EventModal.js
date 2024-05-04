@@ -14,18 +14,41 @@ function formatTime(isoString) {
     return `${hours}:${minutesStr} ${ampm}`;
 }
 
+function formatDate(dateString) {
+    const options = { weekday: 'short', year: 'numeric', month: 'long', day: 'numeric' };
+    const date = new Date(dateString);
+    return date.toLocaleDateString('en-US', options);
+}
+
 const EventModal = ({ isOpen, onClose, title, details, start, end }) => {
     if (!isOpen) return null;
 
     return (
-        <div style={{ position: 'fixed', top: '40%', left: '30%', backgroundColor: 'white', padding: '20px', zIndex: 1000 }}>
-            <h2 className="event-title">{title}</h2>
-            <div className="event-details">{details}</div>
-            <div className="event-time">
-                <strong>Start:</strong> {formatTime(start)} <br />
-                <strong>End:</strong> {formatTime(end)}
+        <div className="event-modal">
+            <div className="event-modal-container">
+                <h2 className="event-title">{title}</h2>
+                <div className="event-details">{details}</div>
+                <div className="event-date">
+                    <span className='material-icons-outlined'>
+                        event
+                    </span>
+                    <p>{formatDate(start)}</p>
+                </div>
+                <div className="event-time">
+                    <span className='material-icons-outlined'>
+                        schedule
+                    </span>
+                    <p>{formatTime(start)}</p>
+                    <p>{formatTime(end)}</p> 
+                </div>
+                <div className="event-footer">
+                    <button onClick={onClose}>
+                        <span className='material-icons-outlined'>
+                            close
+                        </span>
+                    </button> 
+                </div>
             </div>
-            <button onClick={onClose}>Close</button>
         </div>
     );
 };

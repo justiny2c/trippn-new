@@ -1,5 +1,65 @@
 
+.event-modal {
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    position: fixed; 
+    top: 50%; 
+    left: 30%;
+    z-index: 998
+}
+
+.event-modal-container {
+    padding: 20px;
+    width: 85%;
+}
+
+.event-modal div div {
+    margin: 15px 0;
+}
+
 .event-title {
+    margin-top: 10px;
     font-size: 1.2rem;
     font-weight: 500;
 }
+
+.event-details {
+    margin-bottom: 25px !important;
+    color: rgb(110, 110, 110)
+}
+
+.event-date, .event-time {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.event-modal-container span {
+    margin-right: 5px;
+}
+
+p {
+    font-weight: 500;
+    background-color: #f1f1f1;
+    padding: 10px 15px;
+    border-radius: 15px;
+}
+
+.event-date p {
+    width: 90%;
+    margin: 0 5px
+}
+
+.event-time p {
+    width: 50%;
+    margin: 0 5px
+}
+
+.event-footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px !important;
+}
+

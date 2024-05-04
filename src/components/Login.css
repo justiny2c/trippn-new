@@ -59,14 +59,14 @@
 @media (max-width: 768px) {
     .login-page {
         flex-direction: column;
+        justify-content: start;
         margin-top: 100px;
-        height: auto;
     }
 
     .login-hero {
         width: 95%;
         margin: 2px;
-        height: 250px;
+        height: 280px;
     }
 
     .login-statement {
@@ -75,7 +75,9 @@
     }
 
     .login-auth {
+        margin-top: 30px;
         width: 100%;
+        height: 50%;
     }
 
     .login-auth div {

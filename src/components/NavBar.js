@@ -29,7 +29,7 @@ const NavBar = () => {
               <NavLink to="/about-us" className={classNameFunc}>About Us</NavLink>              
             </div>
             <div className={`nav-links nav-two ${isActive ? 'active' : ''}`}>
-              <NavLink to="/login">Login</NavLink>
+              <NavLink to="/signin">Sign In</NavLink>
               {user && <button onClick={signOut} className="sign-out-button">Sign Out</button>}
             </div>
       </nav>
