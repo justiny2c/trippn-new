@@ -27,9 +27,9 @@ const Login = () => {
     return (
         <div className='login-page'>
             <div className='login-hero'>
+                <p className='login-statement'>Ready to explore the world?</p>
                 <p className='login-title'>Please Sign-In!</p>
-                <p className='login-statement'>Ready to explore the world?
-                <br /><br />Join us today to create custom trip plans, 
+                <p className='login-statement'>Join us today to create custom trip plans, 
                 <br /> save your favorite spots, and take the first
                 <br />step toward unforgettable experiences.</p>
             </div>
@@ -38,7 +38,7 @@ const Login = () => {
                 className="authenticating"
                 supabaseClient={supabase}
                 appearance={{ theme: ThemeSupa }}
-                providers={['google', 'facebook', 'twitter']}
+                providers={['google']}
                 />
             </div>
         </div>
