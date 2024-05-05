@@ -292,10 +292,9 @@
 
 .fc-theme-standard .fc-popover {
     border-radius: 10px;
-    top: 50%; 
-    left: 40%;
-    /* width: 35%; */
-    /* width: 300px; */
+    top: 50% !important; 
+    left: 40% !important;
+    width: 300px;
 }
 
 .fc-theme-standard .fc-popover-header {
