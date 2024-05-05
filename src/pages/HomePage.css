@@ -75,7 +75,7 @@
         padding: 15px;
         color: white;
         cursor: pointer;
-        border-radius: 20px;
+        border-radius: 15px;
         margin: 10px 5px;
         width: 130px;
         height: 42px;
@@ -90,7 +90,7 @@
       }
 
       .action-button:hover {
-        box-shadow: 4px 4px lightslategray;
+        box-shadow: 2px 3px lightslategray;
         transform: scale(1.1);
       }
 
