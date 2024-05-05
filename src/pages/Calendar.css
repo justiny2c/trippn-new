@@ -231,6 +231,14 @@
 } 
 
 /* Events */
+
+/* Month view events  */
+.fc .fc-daygrid-body-balanced .fc-daygrid-day-events {
+    margin: 0;
+    padding: 18px 5px 20px 3px;
+    height: 100%
+}
+
 .fc-timegrid-event {
     margin: 0;
 }
@@ -252,6 +260,15 @@
     height: 100%;
 }
 
+/* CSS to hide the dot indicator for month view events */
+/* .fc-daygrid-event-dot {
+    display: none !important;
+} */
+
+.fc-daygrid-dot-event .fc-event-title {
+    font-weight: 550
+}
+
 .fc-timegrid-event .fc-event-time {
     font-size: .72rem;
     color: rgb(65, 65, 65);
@@ -266,4 +283,23 @@
     font-size: .8rem;
     font-weight: 500;
     letter-spacing: .8px;
+}
+
+.fc .fc-more-popover .fc-popover-body {
+    font-size: .95rem;
+    padding-bottom: 20px;
+}
+
+.fc-theme-standard .fc-popover {
+    border-radius: 10px;
+    top: 50%; 
+    left: 40%;
+    /* width: 35%; */
+    /* width: 300px; */
+}
+
+.fc-theme-standard .fc-popover-header {
+    padding: 15px;
+    font-size: .95rem;
+    font-weight: 500;
 }

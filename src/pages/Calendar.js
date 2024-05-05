@@ -15,6 +15,7 @@ const Calendar = () => {
     const [loading, setLoading] = useState(true);
     const [selectedEvent, setSelectedEvent] = useState(null);
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const [initialStart, setInitialStart]=useState("")
 
     const dayHeaderContent = (args) => {
         // Get today's date for comparison
@@ -88,6 +89,7 @@ const Calendar = () => {
                 }));
 
                 setEvents(formattedEvents);
+                setInitialStart(itinerary.start_date)
             }
             setLoading(false);
         };
@@ -103,6 +105,8 @@ const Calendar = () => {
                 <FullCalendar
                     plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
                     initialView="timeGridWeek"
+                    initialDate={initialStart}
+                    firstDay={1}
                     headerToolbar={{
                         left: 'title',
                         center: 'dayGridMonth,timeGridWeek,timeGridDay',
