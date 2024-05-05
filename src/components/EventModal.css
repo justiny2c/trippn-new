@@ -2,32 +2,39 @@
 .event-modal {
     background-color: white;
     border-radius: 10px;
+    overflow: hidden;
     display: flex;
     justify-content: center;
+    border: 1px solid var(--fc-border-color);
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 6px;
     position: fixed; 
     top: 50%; 
-    left: 30%;
+    left: 40%;
+    width: 300px;
     z-index: 998
 }
 
-.event-modal-container {
-    padding: 20px;
-    width: 85%;
-}
+/* .event-modal-container {
+
+} */
 
 .event-modal div div {
-    margin: 15px 0;
+    margin: 10px 0;
+    padding: 5px;
 }
 
 .event-title {
-    margin-top: 10px;
-    font-size: 1.2rem;
+    padding: 15px 10px;
+    background-color: #f1f1f1;
+    font-size: .95rem;
     font-weight: 500;
 }
 
 .event-details {
     margin-bottom: 25px !important;
-    color: rgb(110, 110, 110)
+    color: rgb(110, 110, 110);
+    font-size: .85rem;
+    padding: 10px 15px !important;
 }
 
 .event-date, .event-time {
@@ -37,14 +44,15 @@
 }
 
 .event-modal-container span {
-    margin-right: 5px;
+    margin: 0 5px;
 }
 
-p {
-    font-weight: 500;
+.event-modal p {
+    font-weight: 450;
     background-color: #f1f1f1;
     padding: 10px 15px;
-    border-radius: 15px;
+    border-radius: 10px;
+    font-size: .85rem;
 }
 
 .event-date p {
@@ -60,6 +68,7 @@ p {
 .event-footer {
     display: flex;
     justify-content: center;
-    margin-top: 25px !important;
+    margin-top: 20px !important;
+    color: #8f9396;
 }
 
