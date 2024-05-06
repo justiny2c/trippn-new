@@ -77,7 +77,6 @@
         cursor: pointer;
         border-radius: 15px;
         margin: 10px 5px;
-        width: 130px;
         height: 42px;
       }
 
@@ -95,9 +94,9 @@
       }
 
       .button-logo {
-        height: 1.5rem;
+        height: 40px !important;
         padding: 5px;
-        width: 100%;
+        transform: rotate(25deg);
       }
 
       @media (max-width: 768px) {
