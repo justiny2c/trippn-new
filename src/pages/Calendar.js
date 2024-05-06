@@ -27,7 +27,12 @@ const Calendar = () => {
 
         // Example: args.date is a Date object, args.view and args.text are available
         // const dayNames = new Intl.DateTimeFormat('en-US', { weekday: 'long' }).format(args.date);
-        const dayNumber = new Intl.DateTimeFormat('en-US', { day: '2-digit' }).format(args.date);
+        let dayNumber = new Intl.DateTimeFormat('en-US', { day: '2-digit' }).format(args.date);
+            // Remove leading zero for day numbers less than 10
+        if (dayNumber.startsWith('0')) {
+            dayNumber = dayNumber.substring(1);
+        }
+        
         const dayNames = window.innerWidth >= 768
             ? new Intl.DateTimeFormat('en-US', { weekday: 'long' }).format(args.date)
             : new Intl.DateTimeFormat('en-US', { weekday: 'short' }).format(args.date);

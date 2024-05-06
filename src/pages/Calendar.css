@@ -202,11 +202,11 @@
     }
 
     .header-day-name {
-        font-size: .8rem;
+        font-size: .95rem;
     }
     
     .header-day-number {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
     }
 }
 
