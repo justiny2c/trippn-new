@@ -26,7 +26,7 @@ function App() {
           <NavBar />
             <Routes>
               <Route exact path="/" element={<HomePage />} />
-              <Route path="/login" element={<Login />} />
+              <Route path="/signin" element={<Login />} />
               <Route path="/" element={<ProtectedRoute />}>
                 <Route path="plan-trip" element={ <PlanTripPage />} />
                 <Route path="calendar" element={<Calendar />} />
