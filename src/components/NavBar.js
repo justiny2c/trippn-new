@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import LogoBlue from "../icons/trippn-new-blue-sm.png"
-import {NavLink} from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 import './NavBar.css';
 
