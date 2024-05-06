@@ -26,8 +26,11 @@ const Calendar = () => {
         const isToday = args.date.toISOString() === today.toISOString();
 
         // Example: args.date is a Date object, args.view and args.text are available
-        const dayNames = new Intl.DateTimeFormat('en-US', { weekday: 'long' }).format(args.date);
+        // const dayNames = new Intl.DateTimeFormat('en-US', { weekday: 'long' }).format(args.date);
         const dayNumber = new Intl.DateTimeFormat('en-US', { day: '2-digit' }).format(args.date);
+        const dayNames = window.innerWidth >= 768
+            ? new Intl.DateTimeFormat('en-US', { weekday: 'long' }).format(args.date)
+            : new Intl.DateTimeFormat('en-US', { weekday: 'short' }).format(args.date);
 
         return (
             <div className={`header-container ${isToday ? 'header-today' : ''}`}>

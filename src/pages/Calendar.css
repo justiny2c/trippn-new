@@ -19,13 +19,6 @@
     font-size: .9rem;
 }
 
-@media (max-width: 768px) {
-    .calendar-container {
-        margin-top: 100px;
-        /* height: 120vh; */
-    }
-}
-
 .fc {
     width: 100%;
     height: 100%;
@@ -37,10 +30,27 @@
     border-radius: 5px;
 }
 
+
+
 .fc-toolbar-chunk {
     display: flex;
     flex-flow: row nowrap;
     margin: 0 5px;
+}
+
+@media (max-width: 768px) {
+    .calendar-container {
+        margin-top: 100px;
+        /* height: 120vh; */
+    }
+
+    .fc-toolbar {
+        flex-direction: column;
+    }
+
+    .fc-toolbar-chunk {
+        margin-bottom: 10px;
+    }
 }
 
 .fc-toolbar > .fc-toolbar-chunk:nth-child(2) {
@@ -172,7 +182,6 @@
     font-size: 1rem;
     height: 100px;
     width: 90%;
-    min-width: 75px;
     max-width: 250px
 }
 
@@ -185,6 +194,20 @@
     font-size: 2rem;  /* Larger font size for the day number */
     color: black;      /* More prominent color */
     font-weight: 600; /* Bold for emphasis */
+}
+
+@media (max-width: 768px) {
+    .fc .fc-col-header-cell-cushion {
+        height: 75px;
+    }
+
+    .header-day-name {
+        font-size: .8rem;
+    }
+    
+    .header-day-number {
+        font-size: 1.2rem;
+    }
 }
 
 .header-today {
