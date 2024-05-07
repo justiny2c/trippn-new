@@ -102,13 +102,14 @@ const Calendar = () => {
             // setLoading(false);
             setTimeout(() => {
                 setLoading(false);
-            }, 6500);
+            }, 3000);
         };
 
         fetchData();
     }, [user]); // Depend on user to refetch when user changes
 
-    if (loading) return <p><LoadingScreen /></p>;
+    if (loading) return <div className='loading-container'><LoadingScreen /></div>;
+
 
     return (
         <div className='calendar-page'>
