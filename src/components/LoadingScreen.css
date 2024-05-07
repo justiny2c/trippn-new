@@ -67,12 +67,13 @@
   .loading-text {
     position: absolute; /*Ensure it's positioned relative to its container */
     top: 50%;
-    left: 44%;
-    /* transform: translate(-50%, -50%); */
-    color: white;       /* // Ensuring high contrast */
-    font-size: 24px;
-    opacity: 0;         /* Start hidden */
-    z-index: 10; /* any value higher than the images */
+    left: 42%;
+    color: white;
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: 1.2px;
+    opacity: 0;
+    z-index: 10;
     animation: fadeIn 1s forwards, stayVisible 6s forwards;
     animation-delay: 2s, 3s; /* this delay should be after the last image animation */
   }
@@ -86,5 +87,56 @@
   @keyframes stayVisible {
     to {
       opacity: 1; /* Keep the element visible */
+    }
+  }
+
+
+
+  .spinner {
+    margin: 100px auto;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    text-align: center;
+    
+    -webkit-animation: sk-rotate 2.0s infinite linear;
+    animation: sk-rotate 2.0s infinite linear;
+  }
+  
+  .dot1, .dot2 {
+    width: 60%;
+    height: 60%;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    background-color: #4e8cf5;
+    border-radius: 100%;
+    
+    -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+    animation: sk-bounce 2.0s infinite ease-in-out;
+  }
+  
+  .dot2 {
+    top: auto;
+    bottom: 0;
+    -webkit-animation-delay: -1.0s;
+    animation-delay: -1.0s;
+  }
+  
+  @-webkit-keyframes sk-rotate { 100% { -webkit-transform: rotate(360deg) }}
+  @keyframes sk-rotate { 100% { transform: rotate(360deg); -webkit-transform: rotate(360deg) }}
+  
+  @-webkit-keyframes sk-bounce {
+    0%, 100% { -webkit-transform: scale(0.0) }
+    50% { -webkit-transform: scale(1.0) }
+  }
+  
+  @keyframes sk-bounce {
+    0%, 100% { 
+      transform: scale(0.0);
+      -webkit-transform: scale(0.0);
+    } 50% { 
+      transform: scale(1.0);
+      -webkit-transform: scale(1.0);
     }
   }
