@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Image1 from "../images/ethan-dow-xssEs_oCv-A-unsplash.jpg";
 import Image2 from "../images/meritt-thomas-GktK3Jb9BRE-unsplash.jpg";
-import Image3 from "../images/emily-karakis-h42lxMVrA08-unsplash.jpg";
+import Image3 from "../images/jeremy-doddridge-efhEncQLi4w-unsplash.jpg";
 import Image4 from "../images/drew-dau-VBRahreku1o-unsplash.jpg";
 import "./LoadingScreen.css"
 
@@ -20,7 +20,7 @@ const LoadingScreen = () => {
       // After 8 seconds, set loading to complete
       const loadingTimeout = setTimeout(() => {
         setLoadingComplete(true);
-      }, 8000); // Total animation time now 8 seconds
+      }, 6000); // Total animation time now 8 seconds
   
       return () => {
         // Cleanup timeouts if the component unmounts

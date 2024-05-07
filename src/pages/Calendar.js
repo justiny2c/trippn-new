@@ -6,6 +6,7 @@ import dayGridPlugin from '@fullcalendar/daygrid';
 import timeGridPlugin from '@fullcalendar/timegrid';
 import interactionPlugin from '@fullcalendar/interaction'; // for selectable
 import EventModal from '../components/EventModal';
+import LoadingScreen from '../components/LoadingScreen';
 import "./Calendar.css"
 
 
@@ -98,13 +99,16 @@ const Calendar = () => {
                 setEvents(formattedEvents);
                 setInitialStart(itinerary.start_date)
             }
-            setLoading(false);
+            // setLoading(false);
+            setTimeout(() => {
+                setLoading(false);
+            }, 6500);
         };
 
         fetchData();
     }, [user]); // Depend on user to refetch when user changes
 
-    if (loading) return <p>Loading...</p>;
+    if (loading) return <p><LoadingScreen /></p>;
 
     return (
         <div className='calendar-page'>
