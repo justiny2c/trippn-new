@@ -258,7 +258,7 @@
 /* Month view events  */
 .fc .fc-daygrid-body-balanced .fc-daygrid-day-events {
     margin: 0;
-    padding: 18px 5px 20px 3px;
+    padding: 19px 5px 0 3px;
     height: 100%
 }
 
@@ -283,13 +283,20 @@
     height: 100%;
 }
 
-/* CSS to hide the dot indicator for month view events */
-/* .fc-daygrid-event-dot {
-    display: none !important;
-} */
+.fc .fc-daygrid-day-number {
+    padding: 2px;
+}
+
+.fc-daygrid-event-dot {
+    margin: 0 2px 0 1px;
+}
+
+.fc .fc-daygrid-event {
+    margin-top: 0px;
+}
 
 .fc-daygrid-dot-event .fc-event-title {
-    font-weight: 550
+    font-weight: 550;
 }
 
 .fc-timegrid-event .fc-event-time {
@@ -324,4 +331,5 @@
     padding: 15px;
     font-size: .95rem;
     font-weight: 500;
+    width: 100%;
 }

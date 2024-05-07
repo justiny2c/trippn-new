@@ -78,36 +78,40 @@ const PlanTripPage = () => {
           <p className='form-action'>LET'S GO!</p>
           <div className="form-container">
             <form>
-              <input
-                className='plan-trip-input'
-                type="text"
-                name="from"
-                placeholder="Traveling from..."
-                value={tripDetails.from}
-                onChange={handleInputChange}
-              />
-              <input
-                className='plan-trip-input'
-                type="text"
-                name="to"
-                placeholder="Traveling to..."
-                value={tripDetails.to}
-                onChange={handleInputChange}
-              />
-              <input
-                className='plan-trip-input'
-                type="date"
-                name="startDate"
-                value={tripDetails.startDate}
-                onChange={handleInputChange}
-              />
-              <input
-                className='plan-trip-input'
-                type="date"
-                name="endDate"
-                value={tripDetails.endDate}
-                onChange={handleInputChange}
-              />
+              <div>
+                <input
+                  className='plan-trip-input'
+                  type="text"
+                  name="from"
+                  placeholder="Traveling from..."
+                  value={tripDetails.from}
+                  onChange={handleInputChange}
+                />
+                <input
+                  className='plan-trip-input'
+                  type="text"
+                  name="to"
+                  placeholder="Traveling to..."
+                  value={tripDetails.to}
+                  onChange={handleInputChange}
+                />
+              </ div>
+              <div>
+                <input
+                  className='plan-trip-date'
+                  type="date"
+                  name="startDate"
+                  value={tripDetails.startDate}
+                  onChange={handleInputChange}
+                />
+                <input
+                  className='plan-trip-date'
+                  type="date"
+                  name="endDate"
+                  value={tripDetails.endDate}
+                  onChange={handleInputChange}
+                />
+              </ div>
               {/* <input
                 type="number"
                 name="travelers"
