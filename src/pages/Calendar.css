@@ -338,6 +338,15 @@
     width: 300px;
 }
 
+.fc-popover-body .fc-event-title {
+    font-size: .9rem;
+}
+
+.fc-popover-body .fc-event-time {
+    font-size: .9rem;
+    padding: 0 8px;
+}
+
 .fc-theme-standard .fc-popover-header {
     padding: 15px;
     font-size: .95rem;
