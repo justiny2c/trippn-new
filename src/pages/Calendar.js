@@ -46,7 +46,6 @@ const Calendar = () => {
     };
 
     const handleEventClick = ({ event }) => {
-        console.log("Event clicked:", event.title);
         setSelectedEvent(event);
         setIsModalOpen(true); // Open the modal when an event is clicked
     };

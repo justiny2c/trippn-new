@@ -4,7 +4,7 @@ import { useAuth } from "../contexts/AuthContext";
 
 const ProtectedRoute = () => {
     const { user } = useAuth();
-    console.log`${ user }`
+    // console.log`${ user }`
 
     if (!user) {
         // If not logged in, redirect to the login page
