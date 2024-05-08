@@ -37,6 +37,7 @@
     .hero-mission {
       padding: 20px 10px;
       margin: 0;
+      color: #ebebe9
     }
     
     .hero-title {
@@ -64,6 +65,14 @@
         font-weight: 450;
         margin: 0 3% 0 0;
         text-wrap: nowrap;
+      }
+
+      .suggestion-tag {
+        position: absolute;
+        bottom: 5%;
+        left: 5%;
+        font-size: .85rem;
+        color: #d3d3d2
       }
 
       .action-button {
@@ -130,19 +139,21 @@
 
     .section-why {
       margin: 10px 0 40px 0;
-      padding: 8px 10px;
-      font-weight: 400;
+      padding: 10px 12px;
+      font-weight: 450;
       font-size: 1.1rem;
       letter-spacing: 1.1px;
-      border: 2px solid;
+      border: 2px solid rgb(51, 51, 51);
       border-radius: 15px;
+      color: #a67249;
+      background-color: #ebebe9;
   }
 
     .section-title {
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin-bottom: 50px;
+      margin-bottom: 30px;
     }
 
     .section-statement {
@@ -193,24 +204,25 @@
     .value-card {
       display: flex;
       flex-direction: column;
-      align-items: center;
-      background-color: rgba(78,140,245, .2);
-      border-radius: 40px;
-      padding: 10px;
+      align-items: start;
+      background-color: #ebebe9;
+      border-radius: 30px;
+      padding: 15px;
       margin: 15px 10px;
       height: 280px;
       width: 250px;      
     }
+
+      .value-card span {
+        margin: 15px 25px;
+        color: #a67249;
+        font-size: 3.2rem;
+
+      }
       .value-statement {
         display: flex;
         flex-direction: column;
-        text-align: center;
         padding: 10px;
-      }
-
-      .value-card img {
-        width: 50px;
-        margin: 20px 0 10px;
       }
 
       .value-card h3 {
@@ -222,6 +234,7 @@
       .value-card p {
         font-size: .9rem;
         margin:0;
+        color: gray;
       }
 
 

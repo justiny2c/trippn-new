@@ -24,6 +24,7 @@ const NavBar = () => {
               <div className={`bar3 ${isActive ? 'change' : ''}`}></div>
             </div>
             <div className={`nav-links nav-one ${isActive ? 'active' : ''}`}>
+              <NavLink to="/" className={classNameFunc}>Home</NavLink>
               <NavLink to="/plan-trip" className={classNameFunc}>Plan Trip</NavLink>
               <NavLink to="/calendar" className={classNameFunc}>Itineraries</NavLink>
               <NavLink to="/about-us" className={classNameFunc}>About Us</NavLink>              

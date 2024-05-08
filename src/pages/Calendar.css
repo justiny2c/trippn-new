@@ -283,7 +283,7 @@
 
 /* Event bg color */
 .fc-v-event {
-    background-color: rgba(78,140,245, .4);
+    background-color: rgba(78,140,245, .35);
     border: none;
     padding: 1px 0 1px 2px;
 }

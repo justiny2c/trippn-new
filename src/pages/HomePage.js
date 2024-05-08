@@ -1,17 +1,14 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-// import LogoWhite from "../icons/trippn-new-white-sm.png";
 import LogoWhite from "../icons/trippn-logo-plane-white.png";
-import brainIcon from '../icons/brain.svg';
-import gemIcon from '../icons/gem.svg';
-import plannerIcon from '../icons/planner.svg';
-import techIcon from '../icons/tech.svg';
 import './HomePage.css';
 
 
 const ValueCard = ({ icon, title, description }) => (
-  <div className="value-card">    
-    <img src={icon} alt={title} />
+  <div className="value-card">
+    <span className='material-icons-outlined'>
+      {icon}
+    </span>    
     <div className='value-statement'>
       <h3>{title}</h3>
       <p>{description}</p>
@@ -38,7 +35,11 @@ const HomePage = () => {
               <img src={LogoWhite} className="button-logo" alt="Trippn Logo" />
             </button>
           </div>
-        </div>
+
+        </div>          
+        <p className='suggestion-tag'>
+            *For optimal experience, we recommend using a desktop or laptop computer
+        </p>
       </header>
       <div className='section-container one'>
         <p className='section-why'>WHY?</p>
@@ -52,21 +53,21 @@ const HomePage = () => {
         </div>
         <div className="card-container">
           <ValueCard
-            icon={plannerIcon}
+            icon="event_available"
             title="Seamlessly Planned, Impeccably Executed"
             description="Dive into the details of how users can expect flawlessly organized trips"
           />          
           <ValueCard
-            icon={brainIcon}
+            icon="sensor_occupied"
             title="Travel Smarter, Not Harder"
             description="Convenient and time-efficienct for planning"
           />
           <ValueCard
-            icon={gemIcon}
+            icon="diamond"
             title="From Hidden Gems to Iconic Wonders"
             description="Highlight the range of destinations and experiences available"
           /><ValueCard
-            icon={techIcon}
+            icon="engineering"
             title="AI-Powered Itineraries, Just for You"
             description="Innovative technology behind personalized travel planning"
           />
