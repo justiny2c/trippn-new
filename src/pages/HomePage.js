@@ -32,6 +32,7 @@ const HomePage = () => {
           <div className='hero-statement-action'>
             <p className="hero-statement">For Unforgettable Memories</p>
             <button className="action-button one" onClick={navigateToPlanTrip}>
+              <p>Plan A Trip</p>
               <img src={LogoWhite} className="button-logo" alt="Trippn Logo" />
             </button>
           </div>

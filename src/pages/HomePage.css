@@ -29,9 +29,9 @@
   .hero-container {
     padding:20px;
     position: absolute;
-    top: 10%;
+    top: 15%;
     left: 2%;
-    width: 90%; 
+    width: 95%; 
   }
 
     .hero-mission {
@@ -85,8 +85,15 @@
         color: white;
         cursor: pointer;
         border-radius: 15px;
-        margin: 10px 5px;
+        margin: 20px 5px;
         height: 42px;
+        width: 140px;
+      }
+
+      .action-button.one p {
+        font-size: .95rem;
+        text-wrap: nowrap;
+        font-weight: 450;
       }
 
       .action-button.two {
@@ -138,15 +145,13 @@
   }
 
     .section-why {
-      margin: 10px 0 40px 0;
+      margin: 10px 0 35px 0;
       padding: 10px 12px;
       font-weight: 450;
       font-size: 1.1rem;
       letter-spacing: 1.1px;
       border: 2px solid rgb(51, 51, 51);
       border-radius: 15px;
-      color: #a67249;
-      background-color: #ebebe9;
   }
 
     .section-title {
@@ -167,7 +172,7 @@
       }
 
       .section-statement.three {
-        margin: 30px 30px 20px 30px;
+        margin: 20px 20px 10px;
       }
 
     .section-emphasis {
@@ -233,7 +238,7 @@
 
       .value-card p {
         font-size: .9rem;
-        margin:0;
+        margin:0 0 10px 0;
         color: gray;
       }
 
@@ -242,15 +247,6 @@
     .card-container {
       flex-direction: column;
       align-items: center;
-    }
-
-    .value-card {
-      height: 250px;
-    }
-
-    .value-card p {
-      font-size: .9rem;
-      margin-bottom: 10px;
     }
   }     
 
