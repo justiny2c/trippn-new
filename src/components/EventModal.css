@@ -14,10 +14,6 @@
     z-index: 998
 }
 
-/* .event-modal-container {
-
-} */
-
 .event-modal div div {
     margin: 10px 0;
     padding: 5px;
@@ -69,7 +65,16 @@
 .event-footer {
     display: flex;
     justify-content: center;
-    margin-top: 20px !important;
+    align-items: center;
+    background-color: #131313;
+    margin: 20px 10px 15px !important;
+    border-radius: 10px;
     color: #8f9396;
+    padding: 10px 15px !important;
+}
+
+.event-footer button span {
+    vertical-align: middle;
+    color: white;
 }
 
