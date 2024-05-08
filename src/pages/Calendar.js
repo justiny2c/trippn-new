@@ -113,6 +113,10 @@ const Calendar = () => {
 
     return (
         <div className='calendar-page'>
+            <div className='calendar-intro'>
+                <p className='calendar-title'>Your Itinerary is Ready!</p>
+                <p className='calendar-statement'>Congratulations! Your personalized travel itinerary is crafted and ready to guide you through an unforgettable journey. </p>
+            </div>
             <div className='calendar-container'>
                 <FullCalendar
                     plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
