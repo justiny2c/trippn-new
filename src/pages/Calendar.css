@@ -69,17 +69,25 @@
     border-radius: 5px;
 }
 
-
-
 .fc-toolbar-chunk {
     display: flex;
     flex-flow: row nowrap;
     margin: 0 5px;
+    width: 33%;
 }
 
 @media (max-width: 768px) {
     .calendar-intro {
         margin-top: 100px;
+        height: 240px;
+    }
+
+    .calendar-title {
+        font-size: 1.5rem
+    }
+
+    .calendar-statement {
+        font-size: 1rem
     }
 
     .fc-toolbar {
@@ -88,14 +96,30 @@
 
     .fc-toolbar-chunk {
         margin-bottom: 10px;
+        justify-content: center;
+        width: auto;
     }
 }
 
+.fc-toolbar > .fc-toolbar-chunk:first-child {
+    justify-content: start;
+}
+
 .fc-toolbar > .fc-toolbar-chunk:nth-child(2) {
+    justify-content: space-evenly;
     background-color: #ebebe9;
     padding: 5px;
     border-radius: 8px;
 }
+
+.fc-toolbar > .fc-toolbar-chunk:nth-child(2) .fc-button-group {
+    width: 100%;
+}
+
+.fc-toolbar > .fc-toolbar-chunk:last-child {
+    justify-content: end;
+}
+
 
 
 .fc .fc-toolbar-title {
@@ -109,7 +133,7 @@
     color: black;
     border: none;
     padding: 5px 18px;
-    margin: 0 8px;
+    margin: 0 6px;
 }
 
 .fc .fc-button-primary:not(:disabled):hover {
