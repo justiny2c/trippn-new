@@ -3,9 +3,9 @@ import "./LoadingScreen.css"
 
 const LoadingScreen = () => { 
     return (
-        <div class="spinner">
-          <div class="dot1"></div>
-          <div class="dot2"></div>
+        <div className="spinner">
+          <div className="dot1"></div>
+          <div className="dot2"></div>
         </div>
     );
   };

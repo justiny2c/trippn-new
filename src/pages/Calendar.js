@@ -48,7 +48,9 @@ const Calendar = () => {
 
     const handleEventClick = ({ event }) => {
         setSelectedEvent(event);
+        // console.log(selectedEvent.id)
         setIsModalOpen(true); // Open the modal when an event is clicked
+        // console.log(selectedEvent)
     };
     
     useEffect(() => {
@@ -89,6 +91,7 @@ const Calendar = () => {
 
                 // Adjust data for FullCalendar
                 const formattedEvents = eventsData.map(event => ({
+                    id: event.id,
                     title: event.title,
                     start: event.start_time,
                     end: event.end_time,
@@ -141,6 +144,7 @@ const Calendar = () => {
                 <EventModal
                     isOpen={isModalOpen}
                     onClose={() => setIsModalOpen(false)}
+                    id={selectedEvent?.id}
                     title={selectedEvent?.title}
                     details={selectedEvent?.extendedProps.details}
                     start={selectedEvent?.start.toISOString()}
