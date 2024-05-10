@@ -19,12 +19,30 @@
     padding: 5px;
 }
 
-.event-title {
-    padding: 15px 10px;
+.event-title-container { 
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     background-color: #f1f1f1;
-    font-size: .95rem;
-    font-weight: 500;
     width: 100%;
+    padding: 15px 10px !important;
+    margin: 0 !important;
+}
+
+.event-title {
+    font-size: .95rem;
+    font-weight: 500;   
+}
+
+.event-title-container button {
+    display: flex;
+    align-items: center;
+}
+
+.event-title-container span {
+    font-size: 1.2em;
+    opacity: 0.6;
 }
 
 .event-details {
@@ -42,6 +60,8 @@
 
 .event-modal-container span {
     margin: 0 5px;
+    color: rgb(155, 155, 155);
+    font-size: 1.8em;
 }
 
 .event-modal p {

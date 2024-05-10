@@ -1,4 +1,5 @@
 import React from "react"
+import axios from 'axios';
 import "./EventModal.css"
 
 
@@ -20,13 +21,37 @@ function formatDate(dateString) {
     return date.toLocaleDateString('en-US', options);
 }
 
-const EventModal = ({ isOpen, onClose, title, details, start, end }) => {
+const EventModal = ({ isOpen, onClose, title, details, start, end, id }) => {
     if (!isOpen) return null;
+
+    const handleDeleteEvent = async () => {
+        try {
+            const response = await axios.delete(`https://trippn-ai-fd36c0a9cdb0.herokuapp.com/api/events/${id}`);
+    
+            if (response.status !== 200) {
+                throw new Error('Failed to delete event');
+            }
+    
+            console.log('Event deleted:', response.data);
+            onClose()
+        } catch (error) {
+            console.error('Error deleting event:', error);
+        }
+    };
 
     return (
         <div className="event-modal">
             <div className="event-modal-container">
-                <h2 className="event-title">{title}</h2>
+                <div className="event-title-container">
+                    <h2 className="event-title">
+                        {title}
+                    </h2>
+                    <button onClick={onClose}>
+                        <span className='material-icons-outlined'>
+                            close
+                        </span>
+                    </button> 
+                </div>
                 <div className="event-details">{details}</div>
                 <div className="event-date">
                     <span className='material-icons-outlined'>
@@ -42,9 +67,10 @@ const EventModal = ({ isOpen, onClose, title, details, start, end }) => {
                     <p>{formatTime(end)}</p> 
                 </div>
                 <div className="event-footer">
-                    <button onClick={onClose}>
+
+                    <button onClick={handleDeleteEvent}>
                         <span className='material-icons-outlined'>
-                            close
+                            delete
                         </span>
                     </button> 
                 </div>
