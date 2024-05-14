@@ -32,7 +32,7 @@ const EventModal = ({ isOpen, onClose, title, details, start, end, id }) => {
                 throw new Error('Failed to delete event');
             }
     
-            console.log('Event deleted:', response.data);
+            // console.log('Event deleted:', response.data);
             onClose()
         } catch (error) {
             console.error('Error deleting event:', error);
