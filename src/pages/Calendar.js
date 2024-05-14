@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import supabase from '../api/supabaseClient';
 import { useAuth } from "../contexts/AuthContext";
+import axios from 'axios';
 import FullCalendar from '@fullcalendar/react';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import timeGridPlugin from '@fullcalendar/timegrid';
@@ -48,10 +49,27 @@ const Calendar = () => {
 
     const handleEventClick = ({ event }) => {
         setSelectedEvent(event);
-        // console.log(selectedEvent.id)
-        setIsModalOpen(true); // Open the modal when an event is clicked
-        // console.log(selectedEvent)
+        setIsModalOpen(true); 
     };
+
+    const handleEventDrop = async ({ event }) => {
+        const updatedEvent = {
+            start_time: event.start.toISOString(), // Convert to ISO string or other suitable format
+            end_time: event.end.toISOString()     // Convert to ISO string or other suitable format
+        };
+
+        try {
+            const response = await axios.put(`https://trippn-ai-fd36c0a9cdb0.herokuapp.com/api/events/${event.id}`, updatedEvent);
+    
+            if (response.status !== 200) {
+                throw new Error('Failed to update event');
+            }
+        
+        } catch (error) {
+            console.error('Error updating event:', error);
+        }
+    };
+
     
     useEffect(() => {
         const fetchData = async () => {
@@ -133,6 +151,7 @@ const Calendar = () => {
                     }}
                     timeZone='UTC'
                     editable={true}
+                    eventDrop={handleEventDrop}
                     selectable={true}
                     selectMirror={true}
                     dayMaxEvents={true}

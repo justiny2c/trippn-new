@@ -35,14 +35,25 @@
 
   .nav-two {
     width: auto;
-    font-weight: 600;
+    font-weight: 500;
   }
-  
+
+  .nav-two a {
+    display: flex;
+    align-items: center;
+    margin: 0 5px;
+  }
+
+  .nav-two a span {
+    margin: 0 3px;
+  }
+
+ 
   .nav-links a {
     color: #010B13;
     text-decoration: none;
     margin: 0 10px;
-    font-size: 1rem;
+    font-size: .95rem;
   }
 
   .nav-links a:hover {
@@ -55,6 +66,8 @@
   }
 
   .sign-out-button {
+    display: flex;
+    align-items: center;
     font-family: "Saira", sans-serif;
     font-size: .9rem;
     font-weight: 450;
@@ -63,6 +76,11 @@
     cursor: pointer;
     border-radius: 20px;
     margin: 0 3%;
+  }
+
+  .sign-out-button span {
+    margin: 0 3px;
+    font-size: 23px;
   }
 
   .sign-out-button:hover {

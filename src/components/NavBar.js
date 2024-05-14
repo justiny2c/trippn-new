@@ -30,8 +30,13 @@ const NavBar = () => {
               <NavLink to="/about-us" className={classNameFunc}>About Us</NavLink>              
             </div>
             <div className={`nav-links nav-two ${isActive ? 'active' : ''}`}>
-              <NavLink to="/signin">Sign In</NavLink>
-              {user && <button onClick={signOut} className="sign-out-button">Sign Out</button>}
+                <NavLink to="/signin">Sign In
+                  <span className='material-icons-outlined'>account_circle</span>
+                </NavLink>
+                {user && <button onClick={signOut} className="sign-out-button">
+                  Sign Out                   
+                  <span className='material-icons-outlined'>logout</span>
+                  </button>}
             </div>
       </nav>
     </div>

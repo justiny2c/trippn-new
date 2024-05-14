@@ -41,7 +41,7 @@
 }
 
 .event-title-container span {
-    font-size: 1.2em;
+    font-size: 1.4em !important;
     opacity: 0.6;
 }
 
@@ -63,6 +63,8 @@
     color: rgb(155, 155, 155);
     font-size: 1.8em;
 }
+
+
 
 .event-modal p {
     font-weight: 450;
@@ -91,10 +93,17 @@
     border-radius: 10px;
     color: #8f9396;
     padding: 10px 15px !important;
+    cursor: pointer;
+}
+
+.event-footer:hover {
+    background-color: crimson;
 }
 
 .event-footer button span {
     vertical-align: middle;
     color: white;
 }
+
+
 
