@@ -152,6 +152,7 @@ const Calendar = () => {
                     timeZone='UTC'
                     editable={true}
                     eventDrop={handleEventDrop}
+                    eventResize={handleEventDrop}
                     selectable={true}
                     selectMirror={true}
                     dayMaxEvents={true}
