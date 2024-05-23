@@ -20,15 +20,16 @@ const Calendar = () => {
     const [initialStart, setInitialStart]=useState("")
 
     const dayHeaderContent = (args) => {
-        // Get today's date for comparison
-        const today = new Date();
-        today.setHours(0, 0, 0, 0); // Normalize today's date (remove time)
+        const now = new Date();
+        const utcToday = Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate());
 
-        // Check if the header's date is today
-        const isToday = args.date.toISOString() === today.toISOString();
+        const headerDate = args.date; // This should be in UTC if your calendar is configured correctly
+        const utcHeaderDate = Date.UTC(headerDate.getUTCFullYear(), headerDate.getUTCMonth(), headerDate.getUTCDate());
 
-        // Example: args.date is a Date object, args.view and args.text are available
-        // const dayNames = new Intl.DateTimeFormat('en-US', { weekday: 'long' }).format(args.date);
+        // Check if the header's date is today by comparing the UTC timestamps
+        const isToday = utcToday === utcHeaderDate;
+
+
         let dayNumber = new Intl.DateTimeFormat('en-US', { day: '2-digit' }).format(args.date);
         // Remove leading zero for day numbers less than 10
         if (dayNumber.startsWith('0')) {
@@ -54,8 +55,8 @@ const Calendar = () => {
 
     const handleEventDrop = async ({ event }) => {
         const updatedEvent = {
-            start_time: event.start.toISOString(), // Convert to ISO string or other suitable format
-            end_time: event.end.toISOString()     // Convert to ISO string or other suitable format
+            start_time: event.start.toISOString(), 
+            end_time: event.end.toISOString()
         };
 
         try {
@@ -107,7 +108,6 @@ const Calendar = () => {
                     return;
                 }
 
-                // Adjust data for FullCalendar
                 const formattedEvents = eventsData.map(event => ({
                     id: event.id,
                     title: event.title,
@@ -120,7 +120,7 @@ const Calendar = () => {
                 setEvents(formattedEvents);
                 setInitialStart(itinerary.start_date)
             }
-            // setLoading(false);
+
             setTimeout(() => {
                 setLoading(false);
             }, 2500);
@@ -143,13 +143,13 @@ const Calendar = () => {
                     plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
                     initialView="timeGridWeek"
                     initialDate={initialStart}
-                    firstDay={1}
+                    firstDay={0}
                     headerToolbar={{
                         left: 'title',
                         center: 'dayGridMonth,timeGridWeek,timeGridDay',
                         right: 'prev,today,next'
                     }}
-                    timeZone='UTC'
+                    timeZone='local'
                     editable={true}
                     eventDrop={handleEventDrop}
                     eventResize={handleEventDrop}

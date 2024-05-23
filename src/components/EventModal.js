@@ -16,9 +16,13 @@ function formatTime(isoString) {
 }
 
 function formatDate(dateString) {
-    const options = { weekday: 'short', year: 'numeric', month: 'long', day: 'numeric' };
+    const options = { weekday: 'short', year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' };
+    console.log("Input to formatDate:", dateString);
     const date = new Date(dateString);
-    return date.toLocaleDateString('en-US', options);
+    console.log("Constructed Date Object in formatDate:", date.toISOString());
+    const utcDate = new Date(Date.UTC(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate()));
+
+    return utcDate.toLocaleDateString('en-US', options);
 }
 
 const EventModal = ({ isOpen, onClose, title, details, start, end, id }) => {
@@ -31,8 +35,7 @@ const EventModal = ({ isOpen, onClose, title, details, start, end, id }) => {
             if (response.status !== 200) {
                 throw new Error('Failed to delete event');
             }
-    
-            // console.log('Event deleted:', response.data);
+
             onClose()
         } catch (error) {
             console.error('Error deleting event:', error);
